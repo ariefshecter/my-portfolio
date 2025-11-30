@@ -1,7 +1,7 @@
 export const socials = {
   github: "https://github.com/ariefshecter",
   discord: "https://discord.com/users/arief_shecter",
-  website: "https://your-website.com",
+  website: "https://my-portfolio-eta-ten-60.vercel.app/",
   email: "ceryover@gmail.com",
 };
 

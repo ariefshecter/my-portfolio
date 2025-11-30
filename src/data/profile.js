@@ -17,7 +17,7 @@ export const profile = {
   location: "Lampung, Indonesia",
   email: "ceryover@gmail.com",
   phone: "083199837037", // isi jika mau tampilkan
-  website: "https://your-website.com", // atau GitHub Pages / personal domain
+  website: "https://my-portfolio-eta-ten-60.vercel.app/", // atau GitHub Pages / personal domain
 
   // Foto / avatar (letakkan file di public/assets/profile/)
   avatar: "/assets/profile/profile.jpg",
@@ -32,7 +32,7 @@ export const profile = {
     linkedin: "https://linkedin.com/in/yourhandle",
     twitter: "https://twitter.com/yourhandle",
     instagram: "",
-    website: "https://your-website.com",
+    website: "https://my-portfolio-eta-ten-60.vercel.app/",
     email: "ceryover@gmail.com",
   },
 
