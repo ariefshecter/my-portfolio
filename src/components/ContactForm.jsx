@@ -143,7 +143,7 @@ export default function ContactForm({ endpoint = null }) {
         {endpoint ? (
           <span>Sending to configured endpoint.</span>
         ) : (
-          <span>No endpoint configured — the form uses a mock send. Provide an <code>endpoint</code> prop to post data.</span>
+          <span></span>
         )}
       </div>
     </form>
