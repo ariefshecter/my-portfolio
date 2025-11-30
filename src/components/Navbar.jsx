@@ -159,10 +159,10 @@ export default function Navbar() {
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-3">
                 <div className="w-9 h-9 rounded-lg bg-accentYellow-500 flex items-center justify-center font-bold text-black shadow">
-                  E
+                  R
                 </div>
                 <div>
-                  <div className="text-sm font-semibold">Endfield Style</div>
+                  <div className="text-sm font-semibold">Riefzy Project</div>
                   <div className="text-xs text-neutral-500 dark:text-neutral-400">Navigation</div>
                 </div>
               </div>
