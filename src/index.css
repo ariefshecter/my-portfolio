@@ -1,0 +1,241 @@
+/* src/index.css */
+
+/* =========================================================
+   Tailwind core
+   ========================================================= */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* =========================================================
+   Theme tokens (LIGHT / DARK)
+   ========================================================= */
+
+/* ---------- LIGHT MODE ---------- */
+:root {
+  /* core colors */
+  --c-accent: #ffd400;      /* Yellow */
+  --c-bg: #ffffff;         /* White background */
+  --c-text: #0b0b0b;       /* Black main text */
+
+  /* secondary roles */
+  --c-subtext: rgba(11,11,11,0.65);   /* Subtitle / muted text */
+  --c-border: rgba(11,11,11,0.10);    /* Subtle borders / outlines */
+  --c-cta-text: #0b0b0b;               /* Text color on yellow buttons */
+
+  /* surfaces */
+  --c-card: #ffffff;
+  --c-panel: #fafafa;
+
+  /* shadow */
+  --shadow-soft: 0 8px 24px rgba(0,0,0,0.06);
+}
+
+
+/* ---------- DARK MODE ---------- */
+/* ketika html punya class="dark" */
+html.dark {
+  /* core colors */
+  --c-accent: #ffd400;      /* Yellow tetap sama */
+  --c-bg: #070707;         /* Black background */
+  --c-text: #f7f7f7;       /* White main text */
+
+  /* secondary roles */
+  --c-subtext: rgba(247,247,247,0.66);
+  --c-border: rgba(255,255,255,0.08);
+  --c-cta-text: #0b0b0b;   /* Tetap hitam di tombol kuning */
+
+  /* surfaces */
+  --c-card: #0f0f0f;
+  --c-panel: #121212;
+
+  /* shadow */
+  --shadow-soft: 0 8px 24px rgba(0,0,0,0.5);
+}
+
+
+/* =========================================================
+   Base document styling
+   ========================================================= */
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--c-bg);
+  color: var(--c-text);
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif;
+}
+
+
+/* smooth theme transitions */
+body,
+button,
+a,
+div,
+section {
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease;
+}
+
+
+/* =========================================================
+   Utility helpers (custom)
+   ========================================================= */
+
+/* Text roles */
+.text-main {
+  color: var(--c-text) !important;
+}
+
+.text-sub {
+  color: var(--c-subtext) !important;
+}
+
+.text-accent {
+  color: var(--c-accent) !important;
+}
+
+
+/* Borders */
+.border-sub {
+  border-color: var(--c-border) !important;
+}
+
+
+/* Surfaces */
+.bg-surface {
+  background: var(--c-bg) !important;
+}
+
+.bg-card {
+  background: var(--c-card) !important;
+}
+
+.bg-panel {
+  background: var(--c-panel) !important;
+}
+
+
+/* Buttons */
+.btn-accent {
+  background: var(--c-accent);
+  color: var(--c-cta-text);
+  box-shadow: var(--shadow-soft);
+  @apply px-5 py-3 rounded-lg font-medium;
+}
+
+.btn-accent:hover {
+  filter: brightness(0.97);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--c-subtext);
+  border: 1px solid var(--c-border);
+  @apply px-4 py-3 rounded-lg;
+}
+
+
+/* =========================================================
+   Navigation + common components tweaks
+   ========================================================= */
+
+.nav-link {
+  @apply text-sm font-medium px-2 transition;
+  color: var(--c-subtext);
+}
+
+.nav-link:hover {
+  color: var(--c-text);
+}
+
+
+/* Sidebar icons */
+.sidebar-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  color: var(--c-subtext);
+  transition: all 0.2s ease;
+}
+
+.sidebar-icon:hover {
+  background: var(--c-accent);
+  color: #000;
+}
+
+
+/* sidebar active state */
+.sidebar-icon.active {
+  background: var(--c-accent);
+  color: #000;
+}
+
+
+/* =========================================================
+   Hero section helpers
+   ========================================================= */
+
+.hero-title {
+  color: var(--c-text);
+}
+
+.hero-subtitle {
+  color: var(--c-subtext);
+}
+
+.hero-actions button,
+.hero-actions a {
+  transition: transform 0.15s ease;
+}
+
+.hero-actions button:hover,
+.hero-actions a:hover {
+  transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   Scrollbar styling (optional but clean)
+   ========================================================= */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(150,150,150,0.25);
+}
+
+html.dark ::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.15);
+}
+
+
+/* =========================================================
+   Selection color
+   ========================================================= */
+
+::selection {
+  background: var(--c-accent);
+  color: #000;
+}
