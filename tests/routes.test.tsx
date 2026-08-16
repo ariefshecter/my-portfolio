@@ -171,12 +171,14 @@ describe("case study route", () => {
     expect(linksSection?.textContent).toMatch(/no live demo link is offered/i);
   });
 
-  it("shows a labelled placeholder when no screenshot exists", async () => {
+  it("renders the Sistem Rapor screenshot", async () => {
     const ui = await CaseStudyPage({ params: Promise.resolve({ slug: "sistem-rapor" }) });
     render(ui);
 
-    expect(screen.getByText(/screenshot pending/i)).toBeInTheDocument();
-    expect(screen.getAllByText(/labelled placeholder/i).length).toBeGreaterThan(0);
+    expect(screen.getByRole("img", { name: /Sistem Rapor administrator dashboard/i })).toHaveAttribute(
+      "src",
+      expect.stringContaining("/images/projects/rapor.png"),
+    );
   });
 
   it("calls notFound for an unknown slug", async () => {

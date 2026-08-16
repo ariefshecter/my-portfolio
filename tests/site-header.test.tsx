@@ -39,7 +39,7 @@ describe("SiteHeader navigation", () => {
     expect(primaryNav.querySelector('[aria-current="page"]')).toHaveAttribute("href", "/work");
   });
 
-  it("links the resume to the unchanged PDF path", () => {
+  it("links the resume to the stable PDF path", () => {
     usePathnameMock.mockReturnValue("/");
     render(<SiteHeader />);
 

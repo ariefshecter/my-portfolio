@@ -158,11 +158,13 @@ export const projects: Project[] = [
     featured: true,
     media: [
       {
-        kind: "placeholder",
-        placeholderLabel: "Screenshot pending",
-        alt: "Placeholder panel describing the Sistem Rapor architecture because a product screenshot has not been captured yet.",
+        kind: "screenshot",
+        src: "/images/projects/rapor.png",
+        width: 1366,
+        height: 768,
+        alt: "Sistem Rapor administrator dashboard showing academic navigation, report priorities, PDF output, statistics, and quick access to class, student, teacher, and subject modules.",
         caption:
-          "No product screenshot has been captured for this project yet. The architecture summary below describes the implemented modules.",
+          "Sistem Rapor administrator dashboard: academic data management, statistics, and report generation in one workspace.",
       },
     ],
     caseStudy: {
@@ -263,7 +265,6 @@ export const projects: Project[] = [
       limitations: [
         "No public deployment exists, so the repository is the only verifiable artefact.",
         "Feature tests currently cover the Breeze authentication scaffolding rather than the grading and reporting flows.",
-        "No product screenshot is published here yet; the interface description reflects the implemented routes and views.",
       ],
     },
   },
@@ -283,11 +284,13 @@ export const projects: Project[] = [
     featured: true,
     media: [
       {
-        kind: "placeholder",
-        placeholderLabel: "You are viewing it",
-        alt: "Placeholder panel noting that the live artefact for this case study is the page currently being viewed.",
+        kind: "screenshot",
+        src: "/images/projects/portofolio.png",
+        width: 1366,
+        height: 768,
+        alt: "Portfolio home page showing Ferry Khusnil Arief's Full Stack Developer introduction, capabilities, and actions to view selected work or download the resume.",
         caption:
-          "This case study has no separate screenshot: the rendered site is the artefact under review.",
+          "Portfolio home page: Full Stack positioning, capability summary, selected work, and resume access.",
       },
     ],
     caseStudy: {
@@ -364,16 +367,16 @@ export const projects: Project[] = [
             "Live demo controls only render when a deployment is actually verified, so a reviewer never clicks a link that goes nowhere.",
         },
         {
-          title: "Labelled media placeholders",
+          title: "Evidence-led project media",
           detail:
-            "Where a screenshot does not exist yet, the page says so instead of showing generic filler that implies a product state I cannot evidence.",
+            "Case studies use captured product screens with descriptive captions, so reviewers can inspect the interface alongside the architecture and implementation details.",
         },
       ],
       challenges: [
         {
-          title: "Migrating without losing the resume artefact",
+          title: "Preserving the public resume path during migration",
           detail:
-            "The existing PDF resume had to keep working at its original public path while everything around it was replaced, so it stayed untouched at `/assets/resume/resume.pdf`.",
+            "The resume was rebuilt for the Full Stack positioning while retaining `/assets/resume/resume.pdf`, so existing links continue to resolve without redirects.",
         },
         {
           title: "Writing honest project copy",
@@ -387,7 +390,6 @@ export const projects: Project[] = [
         },
       ],
       limitations: [
-        "Screenshots for one featured project are still pending, and those slots are explicitly labelled rather than filled with stand-in imagery.",
         "There is no analytics or error monitoring wired up.",
         "Tests cover rendering and link contracts, not visual regression.",
       ],

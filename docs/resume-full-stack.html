@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Ferry Khusnil Arief - Full Stack Developer Resume</title>
+    <style>
+      @page {
+        size: A4;
+        margin: 13mm 15mm 12mm;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        color: #18212b;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 9.1pt;
+        line-height: 1.27;
+      }
+
+      header {
+        border-bottom: 2px solid #18212b;
+        padding-bottom: 7px;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: 22pt;
+        line-height: 1;
+        letter-spacing: 0;
+      }
+
+      .role {
+        margin: 4px 0 5px;
+        color: #1f5c56;
+        font-size: 11pt;
+        font-weight: 700;
+      }
+
+      .contact {
+        margin: 0;
+        color: #344352;
+        font-size: 8.6pt;
+      }
+
+      .contact-links {
+        display: block;
+        margin-top: 2px;
+        font-size: 7.8pt;
+      }
+
+      .contact a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      section {
+        margin-top: 8px;
+      }
+
+      h2 {
+        margin: 0 0 5px;
+        border-bottom: 1px solid #9aa5af;
+        padding-bottom: 2px;
+        color: #1f5c56;
+        font-size: 10.5pt;
+        letter-spacing: 0;
+        text-transform: uppercase;
+      }
+
+      p {
+        margin: 0;
+      }
+
+      .entry {
+        margin-top: 6px;
+        page-break-inside: avoid;
+      }
+
+      .entry:first-of-type {
+        margin-top: 0;
+      }
+
+      .entry-heading {
+        display: table;
+        width: 100%;
+      }
+
+      .entry-title,
+      .entry-date {
+        display: table-cell;
+        font-size: 9.5pt;
+        font-weight: 700;
+      }
+
+      .entry-date {
+        width: 24%;
+        text-align: right;
+        white-space: nowrap;
+      }
+
+      .entry-meta {
+        margin-top: 1px;
+        color: #4d5b68;
+        font-size: 8.5pt;
+        font-style: italic;
+      }
+
+      ul {
+        margin: 3px 0 0;
+        padding-left: 16px;
+      }
+
+      li {
+        margin: 1px 0;
+        padding-left: 1px;
+      }
+
+      .skills p {
+        margin: 2px 0;
+      }
+
+      .skills strong {
+        color: #263746;
+      }
+
+      .education {
+        display: table;
+        width: 100%;
+      }
+
+      .education-main,
+      .education-gpa {
+        display: table-cell;
+      }
+
+      .education-gpa {
+        width: 28%;
+        text-align: right;
+        white-space: nowrap;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>FERRY KHUSNIL ARIEF</h1>
+      <p class="role">Full Stack Developer | Fresh Graduate</p>
+      <p class="contact">
+        Lampung, Indonesia | 083199837037 | <a href="mailto:ceryover@gmail.com">ceryover@gmail.com</a>
+        <span class="contact-links">
+          Portfolio: <a href="https://my-portfolio-eta-ten-60.vercel.app">https://my-portfolio-eta-ten-60.vercel.app</a> |
+          GitHub: <a href="https://github.com/ariefshecter">https://github.com/ariefshecter</a> |
+          LinkedIn: <a href="https://www.linkedin.com/in/rief-shecter-127571227/">https://www.linkedin.com/in/rief-shecter-127571227/</a>
+        </span>
+      </p>
+    </header>
+
+    <section>
+      <h2>Professional Summary</h2>
+      <p>
+        Fresh Informatics Technology graduate with a 3.90/4.00 GPA and hands-on experience building full-stack web systems
+        from responsive interfaces to APIs and relational databases. Delivered applications with Next.js, TypeScript,
+        React, Laravel, PHP, Go/Fiber, PostgreSQL, and MySQL/MariaDB, including JWT authentication, role-based access,
+        QR-enabled workflows, reporting, PDF generation, API documentation, and Docker-based development. Applies typed
+        architecture, testing, accessibility, and SEO practices to produce maintainable, user-focused software.
+      </p>
+    </section>
+
+    <section>
+      <h2>Project Experience</h2>
+
+      <div class="entry">
+        <div class="entry-heading">
+          <div class="entry-title">Full Stack Developer - UniSpace Campus Reservation System</div>
+          <div class="entry-date">2025 - 2026</div>
+        </div>
+        <p class="entry-meta">Next.js 16, TypeScript, Go, Fiber, PostgreSQL, JWT, Docker Compose, Swagger/OpenAPI</p>
+        <ul>
+          <li>
+            Designed and built a monorepo-based campus facility reservation platform that digitizes room availability,
+            booking requests, administrative approval, attendance verification, and reporting.
+          </li>
+          <li>
+            Implemented 37 REST API endpoints across authentication, booking, facility, profile, user, and dashboard
+            modules using handler, service, and repository layers in Go/Fiber.
+          </li>
+          <li>
+            Modelled a five-table PostgreSQL schema and secured user and administrator workflows with JWT authentication,
+            OTP verification, protected route groups, and role-based authorization.
+          </li>
+          <li>
+            Built QR ticket generation and browser-based check-in/check-out scanning, plus a background worker that closes
+            stale bookings to keep occupancy and attendance records consistent.
+          </li>
+          <li>
+            Documented the API with Swagger and containerized PostgreSQL setup with an initialization script and health
+            check for reproducible development environments.
+          </li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-heading">
+          <div class="entry-title">Full Stack Developer - Sistem Rapor</div>
+          <div class="entry-date">2026</div>
+        </div>
+        <p class="entry-meta">Laravel 12, PHP 8.2, Blade, Tailwind CSS, MySQL/MariaDB, Laravel Breeze, DomPDF</p>
+        <ul>
+          <li>
+            Built a server-rendered academic reporting system that manages classes, students, teachers, subjects, grades,
+            statistics, and report cards through role-specific workflows.
+          </li>
+          <li>
+            Modelled six domain entities with Eloquent relationships, migrations, and seeders to support repeatable database
+            setup and consistent academic records.
+          </li>
+          <li>
+            Enforced separate administrator and teacher access through Laravel Breeze authentication and custom role
+            middleware, with public registration disabled to protect grade-management functions.
+          </li>
+          <li>
+            Implemented resource controllers and Blade interfaces for master-data management and grade entry, then generated
+            browser-viewable and downloadable PDF report cards from the same stored records using DomPDF.
+          </li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-heading">
+          <div class="entry-title">Developer - Full Stack Portfolio Redesign</div>
+          <div class="entry-date">2026</div>
+        </div>
+        <p class="entry-meta">Next.js 16, React 19, TypeScript, Tailwind CSS, Vitest, Testing Library, Vercel</p>
+        <ul>
+          <li>
+            Rebuilt a Create React App portfolio as a static-first Next.js App Router site with strict TypeScript and one
+            typed content source shared across project, work, and about routes.
+          </li>
+          <li>
+            Added responsive and accessible UI states, static case-study generation, route metadata, JSON-LD, Open Graph,
+            sitemap, robots handling, optimized images, and tests for navigation, content, SEO, and link contracts.
+          </li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-heading">
+          <div class="entry-title">Researcher - Player Clustering with K-Means</div>
+          <div class="entry-date">2025 - 2026</div>
+        </div>
+        <p class="entry-meta">Python, Jupyter, scikit-learn, K-Means, Data Analysis</p>
+        <ul>
+          <li>
+            Prepared survey-style data, evaluated cluster counts, and interpreted player segments by game-feature preference
+            and business model in a reproducible undergraduate thesis notebook.
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="skills">
+      <h2>Technical Skills</h2>
+      <p><strong>Frontend:</strong> HTML5, CSS3, JavaScript ES6+, React, Next.js, TypeScript, Tailwind CSS, Blade, Vite, responsive UI, accessibility</p>
+      <p><strong>Backend:</strong> Go, Fiber, PHP, Laravel, REST API development, JWT authentication, OTP workflows, RBAC, Laravel Breeze</p>
+      <p><strong>Data:</strong> PostgreSQL, MySQL/MariaDB, SQL, relational data modelling, migrations, seeders, Python, Jupyter, scikit-learn, TensorFlow, Keras</p>
+      <p><strong>Engineering:</strong> Git, GitHub, Docker Compose, Swagger/OpenAPI, Vitest, Testing Library, PHPUnit, ESLint, Vercel deployment</p>
+    </section>
+
+    <section>
+      <h2>Education</h2>
+      <div class="education">
+        <div class="education-main">
+          <strong>Universitas Nahdlatul Ulama Lampung (UNU Lampung)</strong><br />
+          Informatics Technology - Fresh Graduate
+        </div>
+        <div class="education-gpa"><strong>GPA: 3.90 / 4.00</strong></div>
+      </div>
+    </section>
+  </body>
+</html>

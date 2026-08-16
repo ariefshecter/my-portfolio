@@ -1,15 +1,17 @@
-# GitHub Synchronization Checklist (Draft)
+# GitHub Profile Optimization Checklist
 
-Status: **not applied**. This is a preparation document only.
+Status: **not applied**. Verified against the public GitHub API on 2026-08-16.
 
-Nothing in this file has been pushed, and no GitHub resource has been modified. Two blockers stand
-in the way of applying it from this workspace:
+No GitHub profile resource has been modified from this workspace. Apply this checklist through the
+GitHub web UI because authenticated GitHub CLI or API access is unavailable here.
 
-1. This workspace has no `.git` directory, so it is not a clone and cannot push.
-2. `gh` is not installed or authenticated here.
+Current public state:
 
-Apply the items below manually through the GitHub web UI, or from an authenticated clone once one
-is available. Verify each claim before publishing it.
+- Display name: `arief`
+- Bio, location, and website: empty
+- Public repositories: 28, including 10 forks
+- Repository topics: none assigned
+- Profile README repository: missing (`ariefshecter/ariefshecter` returns 404)
 
 ---
 
@@ -18,7 +20,7 @@ is available. Verify each claim before publishing it.
 Settings → Public profile.
 
 - [ ] **Name:** `Ferry Khusnil Arief`
-- [ ] **Bio:** `Junior Full Stack Developer — Next.js/TypeScript, Laravel, Go/Fiber, PostgreSQL. Also Python and applied ML.`
+- [ ] **Bio:** `Fresh Graduate & Full Stack Developer | Next.js, TypeScript, Go/Fiber, Laravel, PostgreSQL`
 - [ ] **Location:** `Lampung, Indonesia`
 - [ ] **Website:** `https://my-portfolio-eta-ten-60.vercel.app`
 - [ ] **Social:** LinkedIn `https://www.linkedin.com/in/rief-shecter-127571227/`
@@ -28,43 +30,51 @@ Do not claim years of professional experience or employment that has not happene
 
 ## 2. Profile README (`ariefshecter/ariefshecter`)
 
-Create the repository `ariefshecter` (same name as the account) with a `README.md`. Suggested
-content, matching the portfolio copy exactly:
+Create the public repository `ariefshecter` (exactly the same as the account name), enable the
+`Add a README file` option, and replace its `README.md` with:
 
 ```markdown
 # Ferry Khusnil Arief
 
-Junior Full Stack Developer from Lampung, Indonesia.
+Fresh Informatics Technology graduate (GPA 3.90/4.00) and Full Stack Developer from Lampung,
+Indonesia.
 
-I am a junior Full Stack Developer from Lampung, Indonesia, focused on building practical web
-systems from interface to database. My experience includes Next.js and TypeScript frontends,
-Laravel and PHP applications, Go/Fiber APIs, PostgreSQL and MySQL/MariaDB workflows,
-authentication, reporting, and Docker-based development. I also work with Python and machine
-learning, which helps me approach product development with a data-oriented mindset. I enjoy
-turning operational requirements into clear, maintainable user experiences and reliable
-application workflows.
+I build web systems end to end: typed Next.js and TypeScript interfaces, Go/Fiber and Laravel
+backends, and relational data models in PostgreSQL and MySQL/MariaDB. I also work with Python and
+machine learning, which informs a data-oriented approach to product development.
+
+[Portfolio](https://my-portfolio-eta-ten-60.vercel.app) ·
+[LinkedIn](https://www.linkedin.com/in/rief-shecter-127571227/) ·
+[Email](mailto:ceryover@gmail.com)
 
 ## Selected work
 
 - **[Campus Reservation System](https://github.com/ariefshecter/campus-reservation-system)** —
-  Next.js + TypeScript client, Go/Fiber API, PostgreSQL, JWT auth, QR check-in, Docker Compose.
+  Next.js + TypeScript client, Go/Fiber API with 37 REST endpoints, PostgreSQL, JWT and OTP
+  authentication, QR check-in, and Docker Compose.
 - **[Sistem Rapor](https://github.com/ariefshecter/sistem-rapor)** —
-  Laravel 12 academic reporting with role-based access, migrations/seeders, and PDF report cards.
+  Laravel 12 academic reporting across six domain models, role-based access, migrations and
+  seeders, and PDF report cards.
 - **[Portfolio](https://github.com/ariefshecter/my-portfolio)** —
-  Next.js App Router, TypeScript, typed content model, metadata-driven SEO, accessible UI.
+  Next.js App Router, TypeScript, typed content, metadata-driven SEO, accessible UI, and 52 tests.
+- **[Player Clustering with K-Means](https://github.com/ariefshecter/gamer-clustering-kmeans)** —
+  Undergraduate thesis analysing player characteristics in a reproducible Jupyter workflow.
 
 ## Stack
 
-**Frontend:** HTML, CSS, JavaScript, React, Next.js, TypeScript, Tailwind CSS, Vite
-**Backend:** PHP, Laravel, Go, Fiber, REST APIs, JWT, RBAC
-**Data:** PostgreSQL, MySQL/MariaDB, Python, Jupyter, TensorFlow, Keras, K-Means
-**Engineering:** Docker Compose, Swagger/OpenAPI, Git/GitHub, testing, deployment
+**Frontend:** HTML · CSS · JavaScript · React · Next.js · TypeScript · Tailwind CSS · Blade
+
+**Backend:** Go · Fiber · PHP · Laravel · REST APIs · JWT · OTP · RBAC
+
+**Data:** PostgreSQL · MySQL/MariaDB · Python · Jupyter · TensorFlow · scikit-learn
+
+**Engineering:** Docker Compose · Swagger/OpenAPI · Git/GitHub · Vitest · PHPUnit · Vercel
 
 ## Contact
 
-- Portfolio: https://my-portfolio-eta-ten-60.vercel.app
-- Email: ceryover@gmail.com
-- LinkedIn: https://www.linkedin.com/in/rief-shecter-127571227/
+- Portfolio: <https://my-portfolio-eta-ten-60.vercel.app>
+- Email: <ceryover@gmail.com>
+- LinkedIn: <https://www.linkedin.com/in/rief-shecter-127571227/>
 ```
 
 - [ ] Repository created and public
@@ -88,7 +98,7 @@ Only for original (non-fork) repositories. English descriptions.
 
 | Repository | Description | Topics | Homepage |
 | --- | --- | --- | --- |
-| `campus-reservation-system` | Full-stack campus facility reservation platform: Next.js/TypeScript client, Go/Fiber API, PostgreSQL, JWT auth, QR check-in. | `nextjs` `typescript` `golang` `fiber` `postgresql` `jwt` `docker` `monorepo` | — (no deployment) |
+| `campus-reservation-system` | Full-stack campus facility reservation platform: Next.js/TypeScript client, Go/Fiber API with 37 REST endpoints, PostgreSQL, JWT and OTP auth, QR check-in. | `nextjs` `typescript` `golang` `fiber` `postgresql` `jwt` `docker` `rest-api` `monorepo` | — (no deployment) |
 | `sistem-rapor` | Laravel academic reporting system with role-based access, grade management, and printable PDF report cards. | `laravel` `php` `blade` `mysql` `dompdf` `rbac` | — (no deployment) |
 | `my-portfolio` | Developer portfolio built with Next.js App Router, TypeScript, and Tailwind CSS. | `nextjs` `typescript` `tailwindcss` `portfolio` `accessibility` `seo` | `https://my-portfolio-eta-ten-60.vercel.app` |
 | `gamer-clustering-kmeans` | K-Means clustering of game player characteristics by feature preference and business model. | `python` `jupyter` `kmeans` `clustering` `data-analysis` | — |
@@ -136,6 +146,7 @@ These are forks and must never be presented as original work:
 - [ ] Not pinned
 - [ ] Not referenced as personal projects in the profile README or portfolio
 - [ ] Archive or delete any fork kept only for reference (optional)
+- [ ] Clear inherited homepage URLs from retained forks so they are not mistaken for personal deployments
 
 ## 7. Repositories needing a decision
 
@@ -154,12 +165,15 @@ Only after confirming nothing depends on them:
 - [ ] Verify no `.env` file with real credentials is tracked in any repository.
 - [ ] Verify no database dump contains real personal data before leaving it public.
 
-## 9. Portfolio repository push (separate step)
+## 9. Final quality check
 
-This workspace is not a clone, so the redesign cannot be pushed from here.
+- [ ] Open the profile in a signed-out browser window
+- [ ] Confirm the full name, Full Stack bio, location, portfolio, and LinkedIn are visible
+- [ ] Confirm the profile README appears and every link resolves
+- [ ] Confirm the first three pins immediately show TypeScript/Next.js, Go/Fiber, and Laravel work
+- [ ] Confirm no fork is pinned or described as original work
+- [ ] Confirm flagship repository descriptions and topics display without truncating the core stack
+- [ ] Confirm the portfolio homepage serves the redesigned Next.js site before promoting its URL
 
-- [ ] Clone `https://github.com/ariefshecter/my-portfolio` into a separate directory
-- [ ] Copy the redesigned application into the clone (excluding `node_modules` and `.next`)
-- [ ] Confirm `npm install && npm run lint && npm test && npm run build` all pass in the clone
-- [ ] Commit and push on a branch, then merge after reviewing the diff
-- [ ] Confirm the Vercel deployment picks up the change and the canonical URL still resolves
+Suggested completion order: profile fields, profile README, pinned repositories, flagship metadata,
+remaining original repository metadata, fork hygiene, then the signed-out quality check.

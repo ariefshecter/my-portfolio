@@ -68,14 +68,15 @@ npm test         # Vitest suite
 
 - `public/images/projects/campus-reservation/home-hero.{jpg,webp}` — UniSpace landing page,
   cropped to remove browser chrome, the OS taskbar, the scrollbar, and the dev-tools badge.
+- `public/images/projects/rapor.png` — Sistem Rapor administrator dashboard screenshot.
+- `public/images/projects/portofolio.png` — portfolio home page screenshot.
 - `public/images/profile/ferry-khusnil-arief.{jpg,webp}` — portrait crop.
-- `public/assets/resume/resume.pdf` — **unchanged**. The PDF is the original binary; its contents
-  have not been regenerated or edited.
+- `public/assets/resume/resume.pdf` — current Full Stack Developer resume.
+- `public/assets/resume/Ferry-Khusnil-Arief-Full-Stack-Developer.docx` — editable resume copy.
+- `docs/resume-full-stack.html` — structured source used to generate both downloadable files.
 
-Sistem Rapor has no captured screenshot yet, so its case study renders a labelled placeholder.
-To add one later, drop the image under `public/images/projects/sistem-rapor/` and replace the
-`placeholder` media entry in `content/projects.ts` with a `screenshot` entry including
-`src`, `width`, `height`, descriptive `alt`, and a `caption`.
+Sistem Rapor and the portfolio redesign now use captured screenshots in their case studies. Each
+media entry includes its source dimensions, descriptive alt text, and a caption.
 
 ## Accessibility
 
