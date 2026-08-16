@@ -6,7 +6,7 @@ export function ContactCta() {
     <section
       aria-labelledby="contact-heading"
       id="contact"
-      className="border-t border-ink-100 bg-paper-muted py-16 sm:py-20"
+      className="border-t border-ink-100 bg-paper-muted py-14 sm:py-20"
     >
       <div className="container-editorial">
         <div className="grid gap-10 lg:grid-cols-[1.1fr_1fr] lg:items-start">
@@ -19,7 +19,7 @@ export function ContactCta() {
               The fastest way to reach me is email. My repositories show how I work, and my
               resume covers the same history in a single page.
             </p>
-            <div className="mt-8 flex flex-wrap gap-3">
+            <div className="mobile-stack-actions mt-8 gap-3">
               <ActionLink href={`mailto:${profile.email}`} variant="primary">
                 Email me
               </ActionLink>

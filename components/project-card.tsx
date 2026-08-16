@@ -10,8 +10,8 @@ interface ProjectCardProps {
 
 export function ProjectCard({ project, index }: ProjectCardProps) {
   return (
-    <article className="border-t border-ink-200 pt-8">
-      <div className="grid gap-6 lg:grid-cols-[auto_1fr_auto] lg:items-start lg:gap-10">
+    <article className="border-t border-ink-200 pt-6 sm:pt-8">
+      <div className="grid gap-4 lg:grid-cols-[auto_1fr_auto] lg:items-start lg:gap-10">
         <p aria-hidden="true" className="font-mono text-sm text-ink-300">
           {String(index + 1).padStart(2, "0")}
         </p>
@@ -42,7 +42,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
           </div>
         </div>
 
-        <p className="font-mono text-xs uppercase tracking-[0.12em] text-ink-400 lg:text-right">
+        <p className="order-first font-mono text-xs uppercase tracking-[0.12em] text-ink-400 lg:order-none lg:text-right">
           {project.year}
         </p>
       </div>

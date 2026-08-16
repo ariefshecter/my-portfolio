@@ -35,10 +35,10 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-40 border-b border-ink-100 bg-paper/95 backdrop-blur-sm">
-      <div className="container-editorial flex h-16 items-center justify-between gap-4">
+      <div className="container-editorial flex min-h-16 items-center justify-between gap-3 py-3 sm:h-16 sm:py-0">
         <Link
           href="/"
-          className="font-serif text-base font-semibold tracking-tight text-ink-900"
+          className="max-w-[13rem] font-serif text-[0.9375rem] font-semibold leading-tight tracking-tight text-ink-900 sm:max-w-none sm:text-base"
           aria-label={`${profile.name} — home`}
         >
           {profile.name}
@@ -78,18 +78,20 @@ export function SiteHeader() {
 
         <button
           type="button"
-          className="inline-flex items-center gap-2 rounded-editorial border border-ink-400 px-3 py-2 text-sm text-ink-800 sm:hidden"
+          className="inline-flex min-h-11 shrink-0 items-center gap-2 rounded-editorial border border-ink-400 px-3 text-sm text-ink-800 sm:hidden"
           aria-expanded={open}
           aria-controls={menuId}
           onClick={() => setOpen((value) => !value)}
         >
-          <span aria-hidden="true">{open ? "×" : "≡"}</span>
+          <span aria-hidden="true" className="text-lg leading-none">
+            {open ? "×" : "≡"}
+          </span>
           {open ? "Close menu" : "Menu"}
         </button>
       </div>
 
-      <div id={menuId} hidden={!open} className="border-t border-ink-100 sm:hidden">
-        <nav aria-label="Primary mobile" className="container-editorial py-4">
+      <div id={menuId} hidden={!open} className="border-t border-ink-100 bg-paper-muted sm:hidden">
+        <nav aria-label="Primary mobile" className="container-editorial py-3">
           <ul className="flex flex-col gap-1">
             {navItems.map((item) => {
               const active = isActive(pathname, item.href);
@@ -98,8 +100,10 @@ export function SiteHeader() {
                   <Link
                     href={item.href}
                     aria-current={active ? "page" : undefined}
-                    className={`block rounded-editorial px-2 py-2.5 text-sm ${
-                      active ? "bg-paper-muted font-medium text-ink-900" : "text-ink-700"
+                    className={`block min-h-11 border-l-2 px-3 py-3 text-sm ${
+                      active
+                        ? "border-accent-400 bg-paper font-medium text-ink-900"
+                        : "border-transparent text-ink-700"
                     }`}
                   >
                     {item.label}
@@ -110,7 +114,7 @@ export function SiteHeader() {
             <li>
               <a
                 href={profile.resumePath}
-                className="block rounded-editorial px-2 py-2.5 text-sm text-ink-700"
+                className="block min-h-11 border-l-2 border-transparent px-3 py-3 text-sm text-ink-700"
               >
                 Resume (PDF)
               </a>

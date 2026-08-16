@@ -13,9 +13,9 @@ const leadProject = featuredProjects[0];
 export default function HomePage() {
   return (
     <>
-      <section aria-labelledby="intro-heading" className="py-16 sm:py-24">
+      <section aria-labelledby="intro-heading" className="py-14 sm:py-24">
         <div className="container-editorial">
-          <div className="grid gap-12 lg:grid-cols-[1.15fr_1fr] lg:items-end">
+          <div className="grid gap-10 lg:grid-cols-[1.15fr_1fr] lg:items-end lg:gap-12">
             <div className="max-w-2xl">
               <p className="eyebrow mb-5">
                 {profile.role} · {profile.location}
@@ -29,7 +29,7 @@ export default function HomePage() {
                 them usable. Applied Python and machine learning work shapes how I read product
                 data.
               </p>
-              <div className="mt-9 flex flex-wrap gap-3">
+              <div className="mobile-stack-actions mt-8 gap-3 sm:mt-9">
                 <ActionLink href="/work" variant="primary">
                   View selected work
                 </ActionLink>
@@ -39,7 +39,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            <dl className="grid grid-cols-2 gap-x-6 gap-y-6 border-t border-ink-100 pt-8 lg:border-l lg:border-t-0 lg:pl-10 lg:pt-0">
+            <dl className="grid grid-cols-2 gap-x-5 gap-y-5 border-t border-ink-100 pt-7 lg:border-l lg:border-t-0 lg:pl-10 lg:pt-0">
               {skillGroups.map((group) => (
                 <div key={group.id}>
                   <dt className="eyebrow mb-2">{group.label}</dt>
@@ -60,7 +60,7 @@ export default function HomePage() {
           title={leadProject.title}
           intro={leadProject.outcome}
         >
-          <div className="grid gap-10 lg:grid-cols-[1.4fr_1fr] lg:items-start">
+          <div className="grid gap-8 lg:grid-cols-[1.4fr_1fr] lg:items-start lg:gap-10">
             <ProjectMediaFrame
               media={leadProject.media[0]!}
               priority
@@ -71,10 +71,10 @@ export default function HomePage() {
                 items={leadProject.primaryStack}
                 label={`Primary stack for ${leadProject.title}`}
               />
-              <p className="mt-6 text-base leading-relaxed text-ink-600">
+              <p className="mt-5 text-base leading-relaxed text-ink-600 sm:mt-6">
                 {leadProject.caseStudy.architectureSummary}
               </p>
-              <div className="mt-7 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm">
+              <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm sm:mt-7">
                 <Link
                   href={`/work/${leadProject.slug}`}
                   className="font-medium text-ink-900 underline decoration-accent-600 decoration-2 underline-offset-4"
@@ -97,10 +97,10 @@ export default function HomePage() {
         <ol className="space-y-10">
           {featuredProjects.map((project, index) => (
             <li key={project.slug}>
-              <article className="border-t border-ink-200 pt-8">
-                <div className="grid gap-6 lg:grid-cols-[1.5fr_1fr] lg:gap-12">
+              <article className="border-t border-ink-200 pt-6 sm:pt-8">
+                <div className="grid gap-5 lg:grid-cols-[1.5fr_1fr] lg:gap-12">
                   <div>
-                    <p aria-hidden="true" className="mb-3 font-mono text-sm text-ink-300">
+                    <p aria-hidden="true" className="mb-2 font-mono text-sm text-ink-300">
                       {String(index + 1).padStart(2, "0")}
                     </p>
                     <h3 className="font-serif text-2xl font-semibold sm:text-3xl">
@@ -111,10 +111,10 @@ export default function HomePage() {
                         {project.title}
                       </Link>
                     </h3>
-                    <p className="mt-3 max-w-xl text-base leading-relaxed text-ink-600">
+                    <p className="mt-3 max-w-xl text-[0.9375rem] leading-relaxed text-ink-600 sm:text-base">
                       {project.outcome}
                     </p>
-                    <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm">
+                    <div className="mt-5 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm sm:mt-6">
                       <Link
                         href={`/work/${project.slug}`}
                         className="font-medium text-ink-900 underline decoration-accent-600 decoration-2 underline-offset-4"
@@ -135,7 +135,7 @@ export default function HomePage() {
             </li>
           ))}
         </ol>
-        <p className="mt-12 text-sm">
+        <p className="mt-10 text-sm sm:mt-12">
           <Link
             href="/work"
             className="font-medium text-ink-900 underline decoration-accent-600 decoration-2 underline-offset-4"

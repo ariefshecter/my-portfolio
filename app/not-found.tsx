@@ -3,7 +3,7 @@ import { ActionLink } from "@/components/action-link";
 
 export default function NotFound() {
   return (
-    <section aria-labelledby="not-found-heading" className="py-24 sm:py-32">
+    <section aria-labelledby="not-found-heading" className="py-16 sm:py-32">
       <div className="container-editorial">
         <div className="max-w-2xl">
           <p className="eyebrow mb-4">Error 404</p>
@@ -14,7 +14,7 @@ export default function NotFound() {
             That URL does not match any page on this site. If you were looking for a project, the
             work index lists every case study and supporting repository.
           </p>
-          <div className="mt-9 flex flex-wrap gap-3">
+          <div className="mobile-stack-actions mt-8 gap-3 sm:mt-9">
             <ActionLink href="/work" variant="primary">
               View selected work
             </ActionLink>

@@ -28,11 +28,11 @@ export function Section({
     <section
       id={id}
       aria-labelledby={labelledBy ?? headingId}
-      className={`border-t border-ink-100 py-16 sm:py-20 ${className}`.trim()}
+      className={`border-t border-ink-100 py-14 sm:py-20 ${className}`.trim()}
     >
       <div className="container-editorial">
         {(eyebrow || title || intro) && (
-          <div className="mb-10 max-w-2xl">
+          <div className="mb-8 max-w-2xl sm:mb-10">
             {eyebrow && <p className="eyebrow mb-3">{eyebrow}</p>}
             {title && (
               <Heading id={headingId} className="text-headline font-serif font-semibold">

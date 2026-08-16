@@ -4,7 +4,7 @@ import type { ComponentPropsWithoutRef, ReactNode } from "react";
 type Variant = "primary" | "secondary" | "quiet";
 
 const base =
-  "inline-flex items-center justify-center gap-2 rounded-editorial px-5 py-3 text-sm font-medium transition-colors duration-150";
+  "inline-flex min-h-12 items-center justify-center gap-2 rounded-editorial px-5 py-3 text-sm font-medium transition-colors duration-150";
 
 const variants: Record<Variant, string> = {
   primary:

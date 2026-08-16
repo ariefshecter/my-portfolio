@@ -79,12 +79,12 @@ function SubSection({
   children: React.ReactNode;
 }) {
   return (
-    <section aria-labelledby={`${id}-heading`} className="border-t border-ink-100 pt-10">
+    <section aria-labelledby={`${id}-heading`} className="border-t border-ink-100 pt-8 sm:pt-10">
       {eyebrow && <p className="eyebrow mb-3">{eyebrow}</p>}
       <h2 id={`${id}-heading`} className="font-serif text-2xl font-semibold sm:text-3xl">
         {title}
       </h2>
-      <div className="mt-5">{children}</div>
+      <div className="mt-4 sm:mt-5">{children}</div>
     </section>
   );
 }
@@ -102,9 +102,9 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
   return (
     <>
       <article>
-        <header className="py-16 sm:py-20">
+        <header className="py-14 sm:py-20">
           <div className="container-editorial">
-            <nav aria-label="Breadcrumb" className="mb-8">
+            <nav aria-label="Breadcrumb" className="mb-7 sm:mb-8">
               <ol className="flex flex-wrap items-center gap-2 font-mono text-xs uppercase tracking-[0.12em] text-ink-400">
                 <li>
                   <Link href="/work" className="hover:text-ink-700">
@@ -121,19 +121,19 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
                 {project.year} · {project.primaryStack.join(" · ")}
               </p>
               <h1 className="text-display font-serif font-semibold">{project.title}</h1>
-              <p className="mt-6 text-lg leading-relaxed text-ink-600 sm:text-xl">
+              <p className="mt-5 text-lg leading-relaxed text-ink-600 sm:mt-6 sm:text-xl">
                 {project.outcome}
               </p>
               <p className="mt-5 text-base leading-relaxed text-ink-600">{project.description}</p>
-              <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm">
+              <div className="mt-7 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm sm:mt-8">
                 <ProjectLinks project={project} />
               </div>
             </div>
           </div>
         </header>
 
-        <div className="container-editorial pb-16 sm:pb-20">
-          <div className="space-y-10">
+        <div className="container-editorial pb-14 sm:pb-20">
+          <div className="space-y-9 sm:space-y-10">
             {project.media.map((media, index) => (
               <ProjectMediaFrame
                 key={media.src ?? `${project.slug}-media-${index}`}

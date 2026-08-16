@@ -28,16 +28,16 @@ const kindLabel: Record<string, string> = {
 export default function AboutPage() {
   return (
     <>
-      <section aria-labelledby="about-heading" className="py-16 sm:py-20">
+      <section aria-labelledby="about-heading" className="py-14 sm:py-20">
         <div className="container-editorial">
-          <div className="grid gap-12 lg:grid-cols-[1.3fr_1fr] lg:items-start">
+          <div className="grid gap-9 lg:grid-cols-[1.3fr_1fr] lg:items-start lg:gap-12">
             <div className="max-w-2xl">
               <p className="eyebrow mb-4">About</p>
               <h1 id="about-heading" className="text-display font-serif font-semibold">
                 {profile.headline}
               </h1>
               <p className="mt-7 text-lg leading-relaxed text-ink-600">{profile.summary}</p>
-              <div className="mt-9 flex flex-wrap gap-3">
+              <div className="mobile-stack-actions mt-8 gap-3 sm:mt-9">
                 <ActionLink href={profile.resumePath} variant="primary">
                   Download resume
                 </ActionLink>
@@ -62,7 +62,7 @@ export default function AboutPage() {
                   priority
                 />
               </div>
-              <dl className="mt-6 grid gap-x-6 gap-y-4 sm:grid-cols-2">
+              <dl className="mt-5 grid gap-x-6 gap-y-4 sm:mt-6 sm:grid-cols-2">
                 <div>
                   <dt className="eyebrow mb-1.5">Role</dt>
                   <dd className="text-sm text-ink-700">{profile.role}</dd>
@@ -87,7 +87,7 @@ export default function AboutPage() {
         title="A complementary profile"
         intro="Three strands of work that reinforce each other rather than three unrelated interests."
       >
-        <div className="grid gap-8 sm:grid-cols-3">
+        <div className="grid gap-7 sm:grid-cols-3 sm:gap-8">
           <div className="rule-accent pt-6">
             <h3 className="text-base font-medium text-ink-900">Web application development</h3>
             <p className="mt-2 text-sm leading-relaxed text-ink-600">
@@ -123,7 +123,7 @@ export default function AboutPage() {
           {skillGroups.map((group) => (
             <div
               key={group.id}
-              className="grid gap-3 border-b border-ink-100 py-7 lg:grid-cols-[14rem_1fr] lg:gap-10"
+              className="grid gap-4 border-b border-ink-100 py-6 sm:py-7 lg:grid-cols-[14rem_1fr] lg:gap-10"
             >
               <div>
                 <h3 className="text-base font-medium text-ink-900">{group.label}</h3>
@@ -143,7 +143,7 @@ export default function AboutPage() {
       >
         <ol className="space-y-0 border-t border-ink-100">
           {experience.map((entry) => (
-            <li key={entry.id} className="border-b border-ink-100 py-8">
+            <li key={entry.id} className="border-b border-ink-100 py-7 sm:py-8">
               <div className="grid gap-4 lg:grid-cols-[12rem_1fr] lg:gap-10">
                 <div>
                   <p className="font-mono text-xs uppercase tracking-[0.12em] text-ink-400">

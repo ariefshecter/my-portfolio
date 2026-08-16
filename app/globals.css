@@ -36,7 +36,7 @@
 
   --shadow-lift: 0 1px 2px rgba(23, 22, 19, 0.04), 0 12px 32px -20px rgba(23, 22, 19, 0.25);
 
-  --text-display: clamp(2.5rem, 6vw, 4.5rem);
+  --text-display: clamp(2.35rem, 6vw, 4.5rem);
   --text-display--line-height: 1.02;
   --text-display--letter-spacing: -0.03em;
 
@@ -92,7 +92,7 @@
     margin-inline: auto;
     width: 100%;
     max-width: 72rem;
-    padding-inline: 1.25rem;
+    padding-inline: 1rem;
   }
 
   @media (min-width: 640px) {
@@ -104,6 +104,27 @@
   @media (min-width: 1024px) {
     .container-editorial {
       padding-inline: 2.5rem;
+    }
+  }
+
+  .mobile-stack-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .mobile-stack-actions > * {
+    width: 100%;
+  }
+
+  @media (min-width: 640px) {
+    .mobile-stack-actions {
+      flex-direction: row;
+      align-items: center;
+    }
+
+    .mobile-stack-actions > * {
+      width: auto;
     }
   }
 
@@ -128,6 +149,17 @@
     width: 3rem;
     height: 2px;
     background-color: var(--color-accent-400);
+  }
+}
+
+@media (max-width: 639px) {
+  .text-display {
+    max-width: 12ch;
+  }
+
+  .eyebrow {
+    font-size: 0.625rem;
+    letter-spacing: 0.14em;
   }
 }
 
