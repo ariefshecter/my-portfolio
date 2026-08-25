@@ -94,7 +94,7 @@ describe("content model integrity", () => {
     expect(profile.role).toBe("Junior Full Stack Developer");
     expect(profile.email).toBe("ceryover@gmail.com");
     expect(profile.linkedinUrl).toBe(
-      "https://www.linkedin.com/in/rief-shecter-127571227/",
+      "https://www.linkedin.com/in/ferry-khusnil-arief/",
     );
     expect(profile.githubUrl).toBe("https://github.com/ariefshecter");
     expect(profile.resumePath).toBe("/assets/resume/resume.pdf");
@@ -114,15 +114,20 @@ describe("content model integrity", () => {
     }
   });
 
-  it("labels experience without claiming employment", () => {
+  it("labels experience with the correct evidence type", () => {
     for (const entry of experience) {
-      expect(["project", "academic", "research"]).toContain(entry.kind);
+      expect(["internship", "project", "academic", "research"]).toContain(entry.kind);
       expect(entry.highlights.length).toBeGreaterThan(0);
     }
-    const organisations = experience.map((entry) => entry.organization.toLowerCase());
-    for (const organisation of organisations) {
-      expect(organisation).toMatch(/project|coursework|thesis|academic/);
-    }
+    expect(experience).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({
+          kind: "internship",
+          organization: "PT Microdata Indonesia",
+          period: "Dec 2025 — Feb 2026",
+        }),
+      ]),
+    );
   });
 
   it("contains no legacy template or placeholder copy", () => {

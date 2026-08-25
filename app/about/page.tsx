@@ -9,17 +9,18 @@ import { experience, profile, skillGroups } from "@/content/profile";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Ferry Khusnil Arief is a junior Full Stack Developer from Lampung, Indonesia, working across Next.js and TypeScript frontends, Laravel and Go/Fiber backends, relational databases, and applied machine learning.",
+    "Ferry Khusnil Arief is a junior Full Stack Developer from Lampung, Indonesia, with internship experience building reservation workflows and working across Next.js and TypeScript frontends, Laravel and Go/Fiber backends, relational databases, and applied machine learning.",
   alternates: { canonical: "/about" },
   openGraph: {
     title: "About — Ferry Khusnil Arief",
     description:
-      "Full stack positioning, evidence-based skills, and project and academic experience.",
+      "Full stack positioning, internship experience, evidence-based skills, and project and academic work.",
     url: "/about",
   },
 };
 
 const kindLabel: Record<string, string> = {
+  internship: "Internship",
   project: "Personal project",
   academic: "Coursework",
   research: "Research",
@@ -138,8 +139,8 @@ export default function AboutPage() {
       <Section
         id="experience"
         eyebrow="History"
-        title="Project and academic experience"
-        intro="Labelled honestly. These are personal projects, coursework, and research — not employment."
+        title="Experience and selected work"
+        intro="Internship experience alongside personal projects, coursework, and research."
       >
         <ol className="space-y-0 border-t border-ink-100">
           {experience.map((entry) => (

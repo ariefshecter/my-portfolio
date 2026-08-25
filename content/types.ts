@@ -7,7 +7,7 @@ export interface SkillGroup {
   skills: string[];
 }
 
-export type ExperienceKind = "project" | "academic" | "research";
+export type ExperienceKind = "internship" | "project" | "academic" | "research";
 
 export interface ExperienceEntry {
   id: string;

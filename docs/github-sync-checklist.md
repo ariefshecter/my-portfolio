@@ -23,7 +23,7 @@ Settings → Public profile.
 - [ ] **Bio:** `Fresh Graduate & Full Stack Developer | Next.js, TypeScript, Go/Fiber, Laravel, PostgreSQL`
 - [ ] **Location:** `Lampung, Indonesia`
 - [ ] **Website:** `https://my-portfolio-eta-ten-60.vercel.app`
-- [ ] **Social:** LinkedIn `https://www.linkedin.com/in/rief-shecter-127571227/`
+- [ ] **Social:** LinkedIn `https://www.linkedin.com/in/ferry-khusnil-arief/`
 - [ ] Enable "Available for hire" only while it is actually true.
 
 Do not claim years of professional experience or employment that has not happened.
@@ -44,7 +44,7 @@ backends, and relational data models in PostgreSQL and MySQL/MariaDB. I also wor
 machine learning, which informs a data-oriented approach to product development.
 
 [Portfolio](https://my-portfolio-eta-ten-60.vercel.app) ·
-[LinkedIn](https://www.linkedin.com/in/rief-shecter-127571227/) ·
+[LinkedIn](https://www.linkedin.com/in/ferry-khusnil-arief/) ·
 [Email](mailto:ceryover@gmail.com)
 
 ## Selected work
@@ -74,7 +74,7 @@ machine learning, which informs a data-oriented approach to product development.
 
 - Portfolio: <https://my-portfolio-eta-ten-60.vercel.app>
 - Email: <ceryover@gmail.com>
-- LinkedIn: <https://www.linkedin.com/in/rief-shecter-127571227/>
+- LinkedIn: <https://www.linkedin.com/in/ferry-khusnil-arief/>
 ```
 
 - [ ] Repository created and public

@@ -8,7 +8,7 @@ export const profile: Profile = {
   location: "Lampung, Indonesia",
   email: "ceryover@gmail.com",
   githubUrl: "https://github.com/ariefshecter",
-  linkedinUrl: "https://www.linkedin.com/in/rief-shecter-127571227/",
+  linkedinUrl: "https://www.linkedin.com/in/ferry-khusnil-arief/",
   canonicalUrl: SITE_URL,
   resumePath: "/assets/resume/resume.pdf",
   availability: "Open to junior full stack roles and selected freelance work",
@@ -82,17 +82,17 @@ export const skillGroups: SkillGroup[] = [
 export const experience: ExperienceEntry[] = [
   {
     id: "campus-reservation",
-    kind: "project",
-    title: "Full Stack Developer — Campus Reservation System (UniSpace)",
-    organization: "Personal project",
-    period: "2025 — 2026",
+    kind: "internship",
+    title: "Web Developer Intern — Campus Reservation System",
+    organization: "PT Microdata Indonesia",
+    period: "Dec 2025 — Feb 2026",
     location: "Lampung, Indonesia",
     description:
-      "Designed and built a campus facility reservation platform as a monorepo, combining a Next.js and TypeScript web client with a Go/Fiber API and PostgreSQL persistence.",
+      "Contributed to a web-based Campus Reservation system that digitized campus facility availability, booking requests, administrative approval, attendance verification, and reporting.",
     highlights: [
-      "Implemented JWT authentication, role separation between user and administrator areas, and booking approval flows.",
-      "Built QR-based check-in and check-out handling with digital ticket generation on the client.",
-      "Documented the API with Swagger and provisioned PostgreSQL through Docker Compose for reproducible local runs.",
+      "Developed reservation workflows and CRUD functionality for facilities, bookings, user profiles, and reservation records.",
+      "Implemented JWT authentication, role-based access, booking approval flows, and QR-based check-in and check-out handling.",
+      "Tested features, investigated defects, and collaborated with the development team to improve application reliability and usability.",
     ],
   },
   {
