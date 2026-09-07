@@ -34,11 +34,11 @@ export function SiteHeader() {
   }, []);
 
   return (
-    <header className="sticky top-0 z-40 border-b-2 border-ink-900 bg-paper/95 backdrop-blur-sm">
-      <div className="container-editorial flex min-h-16 items-center justify-between gap-3 py-3 sm:h-16 sm:py-0">
+    <header className="sticky top-0 z-40 border-b-2 border-ink-900 bg-paper-muted/95 backdrop-blur-sm">
+      <div className="container-editorial flex min-h-16 items-center justify-between gap-3 py-2.5 sm:h-16 sm:py-0">
         <Link
           href="/"
-          className="max-w-[13rem] font-serif text-[0.9375rem] font-bold tracking-tight text-ink-950 sm:max-w-none sm:text-base"
+          className="max-w-[14rem] font-sans text-[1.05rem] font-bold tracking-tight text-ink-950 sm:max-w-none sm:text-lg"
           aria-label={`${profile.name} — home`}
         >
           {profile.name}
@@ -78,21 +78,21 @@ export function SiteHeader() {
 
         <button
           type="button"
-          className="inline-flex min-h-11 shrink-0 items-center gap-2 rounded-editorial border-2 border-ink-900 bg-paper px-3 font-mono text-xs font-semibold uppercase tracking-wider text-ink-900 shadow-[2px_2px_0px_var(--color-ink-900)] sm:hidden"
+          className="inline-flex min-h-11 shrink-0 items-center justify-center gap-2 rounded-editorial border-2 border-ink-900 bg-paper px-3 font-mono text-xs font-bold uppercase tracking-wider text-ink-950 shadow-[2px_2px_0px_var(--color-ink-900)] active:translate-x-[1px] active:translate-y-[1px] active:shadow-none sm:hidden"
           aria-expanded={open}
           aria-controls={menuId}
           onClick={() => setOpen((value) => !value)}
         >
-          <span aria-hidden="true" className="text-lg leading-none">
-            {open ? "×" : "≡"}
+          <span aria-hidden="true" className="text-lg leading-none font-bold">
+            {open ? "✕" : "☰"}
           </span>
-          {open ? "Close menu" : "Menu"}
+          <span>{open ? "Close menu" : "Menu"}</span>
         </button>
       </div>
 
-      <div id={menuId} hidden={!open} className="border-t-2 border-ink-900 bg-paper-muted sm:hidden">
-        <nav aria-label="Primary mobile" className="container-editorial py-3">
-          <ul className="flex flex-col gap-1">
+      <div id={menuId} hidden={!open} className="border-t-2 border-ink-900 bg-paper-sunken sm:hidden">
+        <nav aria-label="Primary mobile" className="container-editorial py-4">
+          <ul className="flex flex-col gap-2">
             {navItems.map((item) => {
               const active = isActive(pathname, item.href);
               return (
@@ -100,8 +100,10 @@ export function SiteHeader() {
                   <Link
                     href={item.href}
                     aria-current={active ? "page" : undefined}
-                    className={`block py-2 font-mono text-xs uppercase tracking-wider ${
-                      active ? "font-bold text-accent-600" : "text-ink-800"
+                    className={`block border-2 border-ink-900 px-4 py-3 font-mono text-xs font-bold uppercase tracking-wider shadow-[2px_2px_0px_var(--color-ink-900)] transition-all ${
+                      active
+                        ? "bg-accent-500 text-paper"
+                        : "bg-paper text-ink-900 hover:bg-paper-muted"
                     }`}
                   >
                     {item.label}
@@ -109,12 +111,12 @@ export function SiteHeader() {
                 </li>
               );
             })}
-            <li className="pt-2">
+            <li className="pt-1">
               <a
                 href={profile.resumePath}
-                className="block border-2 border-ink-900 bg-paper py-2 text-center font-mono text-xs font-bold uppercase tracking-wider text-ink-900 shadow-[2px_2px_0px_var(--color-ink-900)]"
+                className="block border-2 border-ink-900 bg-paper px-4 py-3 text-center font-mono text-xs font-bold uppercase tracking-wider text-ink-950 shadow-[2px_2px_0px_var(--color-ink-900)] hover:bg-paper-muted"
               >
-                Resume (PDF)
+                Download Resume (PDF)
               </a>
             </li>
           </ul>

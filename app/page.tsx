@@ -39,12 +39,12 @@ export default function HomePage() {
 
                 <h1
                   id="intro-heading"
-                  className="font-serif text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-ink-950 leading-[1.05]"
+                  className="font-sans text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-ink-950 leading-[1.05]"
                 >
                   {profile.name}
                 </h1>
 
-                <p className="mt-6 font-serif text-lg sm:text-xl leading-relaxed text-ink-800 italic border-l-4 border-accent-500 pl-4 bg-paper-muted py-2">
+                <p className="mt-6 font-mono text-base sm:text-lg leading-relaxed text-ink-800 border-l-4 border-accent-500 pl-4 bg-paper-muted py-2">
                   &ldquo;Building resilient web applications end to end: typed Next.js interfaces,
                   robust Laravel &amp; Go APIs, and structured relational workflows.&rdquo;
                 </p>

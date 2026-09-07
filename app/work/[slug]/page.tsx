@@ -76,7 +76,7 @@ function SubSection({
   return (
     <section aria-labelledby={`${id}-heading`} className="vintage-border-t pt-8 sm:pt-10">
       {eyebrow && <p className="eyebrow mb-2">{eyebrow}</p>}
-      <h2 id={`${id}-heading`} className="font-serif text-2xl font-bold tracking-tight text-ink-950 sm:text-3xl">
+      <h2 id={`${id}-heading`} className="font-sans text-2xl font-bold tracking-tight text-ink-950 sm:text-3xl">
         {title}
       </h2>
       <div className="mt-4 sm:mt-5 text-ink-800">{children}</div>
@@ -113,11 +113,11 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
               </span>
             </div>
 
-            <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-black text-ink-950 tracking-tight leading-tight">
+            <h1 className="font-sans text-3xl sm:text-4xl lg:text-5xl font-black text-ink-950 tracking-tight leading-tight">
               {project.title}
             </h1>
 
-            <p className="mt-5 max-w-3xl font-serif text-lg sm:text-xl leading-relaxed text-ink-800 italic border-l-4 border-accent-500 pl-4 bg-paper-muted py-2">
+            <p className="mt-5 max-w-3xl font-mono text-base sm:text-lg leading-relaxed text-ink-800 border-l-4 border-accent-500 pl-4 bg-paper-muted py-2">
               {project.outcome}
             </p>
 
@@ -191,7 +191,7 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
                 <ul className="space-y-4">
                   {caseStudy.decisions.map((decision) => (
                     <li key={decision.title} className="vintage-border-box p-5 bg-paper">
-                      <h3 className="font-serif text-base font-bold text-ink-950">{decision.title}</h3>
+                      <h3 className="font-sans text-base font-bold text-ink-950">{decision.title}</h3>
                       <p className="mt-1 text-sm text-ink-700">{decision.detail}</p>
                     </li>
                   ))}
@@ -202,7 +202,7 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
                 <ul className="space-y-4">
                   {caseStudy.challenges.map((challenge) => (
                     <li key={challenge.title} className="vintage-border-box p-5 bg-paper">
-                      <h3 className="font-serif text-base font-bold text-ink-950">{challenge.title}</h3>
+                      <h3 className="font-sans text-base font-bold text-ink-950">{challenge.title}</h3>
                       <p className="mt-1 text-sm text-ink-700">{challenge.detail}</p>
                     </li>
                   ))}

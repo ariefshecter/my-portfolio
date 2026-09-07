@@ -19,7 +19,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
         </div>
 
         <div className="max-w-2xl">
-          <h3 className="font-serif text-2xl font-bold tracking-tight text-ink-950 sm:text-3xl">
+          <h3 className="font-sans text-2xl font-bold tracking-tight text-ink-950 sm:text-3xl">
             <Link
               href={`/work/${project.slug}`}
               className="decoration-accent-500 decoration-2 underline-offset-[6px] hover:underline hover:text-accent-600 transition-colors"

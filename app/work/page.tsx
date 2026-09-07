@@ -43,10 +43,10 @@ export default function WorkPage() {
                 <span className="vintage-stamp">Index</span>
                 <p className="eyebrow">Engineering Repository</p>
               </div>
-              <h1 id="work-heading" className="font-serif text-3xl sm:text-4xl lg:text-5xl font-black text-ink-950 tracking-tight">
+              <h1 id="work-heading" className="font-sans text-3xl sm:text-4xl lg:text-5xl font-black text-ink-950 tracking-tight">
                 Case studies &amp; Project Archive
               </h1>
-              <p className="mt-6 font-serif text-lg leading-relaxed text-ink-800 italic border-l-4 border-accent-500 pl-4 bg-paper-muted py-2">
+              <p className="mt-6 font-mono text-base sm:text-lg leading-relaxed text-ink-800 border-l-4 border-accent-500 pl-4 bg-paper-muted py-2">
                 Documenting production-ready applications, architectural trade-offs, database schemes,
                 and technical constraints across multiple ecosystems.
               </p>
@@ -85,7 +85,7 @@ export default function WorkPage() {
                     ARCHIVE CATEGORY
                   </span>
                   <span className="text-ink-400">/</span>
-                  <h3 className="font-serif text-xl font-bold text-ink-950">{group.category}</h3>
+                  <h3 className="font-sans text-xl font-bold text-ink-950">{group.category}</h3>
                 </div>
                 <span className="font-mono text-xs text-ink-700 font-bold bg-paper-sunken px-2.5 py-1 border border-ink-400">
                   {group.items.length} RECORDS
@@ -96,7 +96,7 @@ export default function WorkPage() {
                   <li key={item.repositoryUrl} className="py-5 first:pt-2 last:pb-2 sm:py-6">
                     <div className="grid gap-3 sm:grid-cols-[1fr_auto] sm:items-start sm:gap-8">
                       <div className="max-w-2xl">
-                        <h4 className="font-serif text-lg font-bold text-ink-950">{item.name}</h4>
+                        <h4 className="font-sans text-lg font-bold text-ink-950">{item.name}</h4>
                         <p className="mt-1.5 text-sm leading-relaxed text-ink-700">
                           {item.description}
                         </p>

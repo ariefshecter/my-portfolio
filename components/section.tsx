@@ -35,7 +35,7 @@ export function Section({
           <div className="mb-8 max-w-2xl sm:mb-10">
             {eyebrow && <p className="eyebrow mb-3">{eyebrow}</p>}
             {title && (
-              <Heading id={headingId} className="text-headline font-serif font-bold tracking-tight text-ink-950">
+              <Heading id={headingId} className="text-headline font-sans font-bold tracking-tight text-ink-950">
                 {title}
               </Heading>
             )}

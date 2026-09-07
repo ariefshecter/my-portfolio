@@ -2,39 +2,38 @@
 @plugin "@tailwindcss/typography";
 
 @theme {
-  --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, sans-serif;
-  --font-serif: var(--font-fraunces), Georgia, "Times New Roman", serif;
-  --font-mono: ui-monospace, "SFMono-Regular", "JetBrains Mono", Menlo, Monaco, monospace;
+  --font-sans: var(--font-inter), system-ui, -apple-system, sans-serif;
+  --font-serif: "Playfair Display", "Times New Roman", Times, serif;
+  --font-mono: "Courier Prime", "Courier New", Courier, monospace, ui-monospace;
 
-  /* Retro Newspaper / Vintage Warm Strong Paper Foundation */
-  --color-paper: #f4ece1;
-  --color-paper-muted: #e8dcc8;
-  --color-paper-sunken: #ddcdb4;
+  /* Deep Warm Retro Parchment / Caramel Kraft / Brown Earth Foundation */
+  --color-paper: #d8c4a4;
+  --color-paper-muted: #caaF8d;
+  --color-paper-sunken: #bfa17d;
 
-  --color-ink-50: #efe4d0;
-  --color-ink-100: #dfcfb2;
-  --color-ink-200: #c4b08b;
-  --color-ink-300: #9c825a;
-  --color-ink-400: #7a613b;
-  --color-ink-500: #5c4728;
-  --color-ink-600: #42321b;
-  --color-ink-700: #302312;
-  --color-ink-800: #20170a;
-  --color-ink-900: #120c05;
+  --color-ink-50: #cdb594;
+  --color-ink-100: #b89c74;
+  --color-ink-200: #9c7d54;
+  --color-ink-300: #7e5e35;
+  --color-ink-400: #654620;
+  --color-ink-500: #4f3314;
+  --color-ink-600: #3a220a;
+  --color-ink-700: #291705;
+  --color-ink-800: #1b0e02;
+  --color-ink-900: #100801;
 
   /* Rich Vintage Amber / Espresso Brown Accents */
-  --color-accent-100: #f2e1c9;
-  --color-accent-200: #e4be90;
-  --color-accent-300: #ce9450;
-  --color-accent-400: #b86b1f;
-  --color-accent-500: #9c5010;
-  --color-accent-600: #7b3a08;
-  --color-accent-700: #552402;
+  --color-accent-100: #dfc29c;
+  --color-accent-200: #c69b61;
+  --color-accent-300: #ad7733;
+  --color-accent-400: #8f5313;
+  --color-accent-500: #743e08;
+  --color-accent-600: #572a02;
+  --color-accent-700: #3b1901;
 
   --radius-editorial: 0px;
 
-  --shadow-lift: 3px 3px 0px #20170a;
+  --shadow-lift: 3px 3px 0px #1f1406;
 
   --text-display: clamp(2.35rem, 6vw, 4.5rem);
   --text-display--line-height: 1.02;
@@ -62,9 +61,9 @@
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     background-image: 
-      linear-gradient(rgba(32, 23, 10, 0.05) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(32, 23, 10, 0.05) 1px, transparent 1px);
-    background-size: 28px 28px;
+      linear-gradient(rgba(27, 14, 2, 0.12) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(27, 14, 2, 0.12) 1px, transparent 1px);
+    background-size: 24px 24px;
     background-position: -1px -1px;
   }
 
@@ -157,14 +156,23 @@
 
   .vintage-border-box {
     border: 2px solid var(--color-ink-800);
-    box-shadow: 4px 4px 0 var(--color-ink-800);
+    box-shadow: 3px 3px 0 var(--color-ink-800);
     background-color: var(--color-paper-muted);
   }
 
   .vintage-panel {
     border: 2px solid var(--color-ink-800);
     background-color: var(--color-paper);
-    box-shadow: 5px 5px 0 var(--color-ink-800);
+    box-shadow: 4px 4px 0 var(--color-ink-800);
+  }
+
+  @media (min-width: 640px) {
+    .vintage-border-box {
+      box-shadow: 4px 4px 0 var(--color-ink-800);
+    }
+    .vintage-panel {
+      box-shadow: 6px 6px 0 var(--color-ink-800);
+    }
   }
 
   .vintage-stamp {

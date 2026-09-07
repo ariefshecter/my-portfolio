@@ -9,7 +9,7 @@ export function SiteFooter() {
       <div className="container-editorial">
         <div className="flex flex-col gap-8 sm:flex-row sm:items-start sm:justify-between">
           <div>
-            <p className="font-serif text-base font-bold tracking-tight text-ink-950">{profile.name}</p>
+            <p className="font-sans text-base font-bold tracking-tight text-ink-950">{profile.name}</p>
             <p className="mt-1 font-mono text-xs text-ink-600">
               {profile.role} · {profile.location}
             </p>

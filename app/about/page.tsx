@@ -38,10 +38,10 @@ export default function AboutPage() {
                   <span className="vintage-stamp">Dossier</span>
                   <p className="eyebrow">Personnel Record</p>
                 </div>
-                <h1 id="about-heading" className="font-serif text-3xl sm:text-4xl lg:text-5xl font-black text-ink-950 tracking-tight leading-tight">
+                <h1 id="about-heading" className="font-sans text-3xl sm:text-4xl lg:text-5xl font-black text-ink-950 tracking-tight leading-tight">
                   {profile.headline}
                 </h1>
-                <p className="mt-6 text-base sm:text-lg leading-relaxed text-ink-800 font-sans border-l-4 border-accent-500 pl-4 bg-paper-muted py-2">
+                <p className="mt-6 text-base sm:text-lg leading-relaxed text-ink-800 font-mono border-l-4 border-accent-500 pl-4 bg-paper-muted py-2">
                   {profile.summary}
                 </p>
 
@@ -105,7 +105,7 @@ export default function AboutPage() {
         <div className="grid gap-6 sm:grid-cols-3 sm:gap-8">
           <div className="vintage-border-box bg-paper p-6">
             <span className="font-mono text-xs font-bold text-accent-700 uppercase tracking-widest">STRAND I</span>
-            <h3 className="mt-2 font-serif text-lg font-bold text-ink-950">Web application development</h3>
+            <h3 className="mt-2 font-sans text-lg font-bold text-ink-950">Web application development</h3>
             <p className="mt-3 text-sm leading-relaxed text-ink-700">
               Typed Next.js and React interfaces, Blade templates, responsive layout, and
               accessible interaction states. I care about the states a screen has, not only its
@@ -114,7 +114,7 @@ export default function AboutPage() {
           </div>
           <div className="vintage-border-box bg-paper p-6">
             <span className="font-mono text-xs font-bold text-accent-700 uppercase tracking-widest">STRAND II</span>
-            <h3 className="mt-2 font-serif text-lg font-bold text-ink-950">Backend APIs &amp; schemas</h3>
+            <h3 className="mt-2 font-sans text-lg font-bold text-ink-950">Backend APIs &amp; schemas</h3>
             <p className="mt-3 text-sm leading-relaxed text-ink-700">
               Clean HTTP endpoints, explicit request validation, database transactions, and
               relational models that match the real domain. I would rather make invalid state
@@ -123,7 +123,7 @@ export default function AboutPage() {
           </div>
           <div className="vintage-border-box bg-paper p-6">
             <span className="font-mono text-xs font-bold text-accent-700 uppercase tracking-widest">STRAND III</span>
-            <h3 className="mt-2 font-serif text-lg font-bold text-ink-950">Applied ML &amp; product data</h3>
+            <h3 className="mt-2 font-sans text-lg font-bold text-ink-950">Applied ML &amp; product data</h3>
             <p className="mt-3 text-sm leading-relaxed text-ink-700">
               Feature extraction, classification workflows, and model evaluations that answer
               product questions. ML work taught me to distrust intuition and test against real
@@ -166,7 +166,7 @@ export default function AboutPage() {
                   <span className="mr-2 font-mono text-[0.65rem] font-bold uppercase tracking-wider text-accent-700 border border-accent-600 px-1.5 py-0.5">
                     {kindLabel[item.kind] ?? item.kind}
                   </span>
-                  <h3 className="inline font-serif text-lg font-bold text-ink-950">{item.title}</h3>
+                  <h3 className="inline font-sans text-lg font-bold text-ink-950">{item.title}</h3>
                 </div>
                 <span className="font-mono text-xs text-ink-600 font-semibold">{item.period}</span>
               </div>

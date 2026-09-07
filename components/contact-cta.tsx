@@ -15,7 +15,7 @@ export function ContactCta() {
               <span className="vintage-stamp">Available</span>
               <p className="eyebrow">Dispatch Desk</p>
             </div>
-            <h2 id="contact-heading" className="text-headline font-serif font-bold tracking-tight text-ink-950">
+            <h2 id="contact-heading" className="text-headline font-sans font-bold tracking-tight text-ink-950">
               {profile.availability}
             </h2>
             <p className="mt-4 text-base leading-relaxed text-ink-700">
