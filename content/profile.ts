@@ -7,6 +7,7 @@ export const profile: Profile = {
   role: "Junior Full Stack Developer",
   location: "Lampung, Indonesia",
   email: "ceryover@gmail.com",
+  phone: "087790239132",
   githubUrl: "https://github.com/ariefshecter",
   linkedinUrl: "https://www.linkedin.com/in/ferry-khusnil-arief/",
   canonicalUrl: SITE_URL,

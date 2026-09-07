@@ -28,18 +28,18 @@ export function Section({
     <section
       id={id}
       aria-labelledby={labelledBy ?? headingId}
-      className={`border-t border-ink-100 py-14 sm:py-20 ${className}`.trim()}
+      className={`vintage-border-t py-14 sm:py-20 ${className}`.trim()}
     >
       <div className="container-editorial">
         {(eyebrow || title || intro) && (
           <div className="mb-8 max-w-2xl sm:mb-10">
             {eyebrow && <p className="eyebrow mb-3">{eyebrow}</p>}
             {title && (
-              <Heading id={headingId} className="text-headline font-serif font-semibold">
+              <Heading id={headingId} className="text-headline font-serif font-bold tracking-tight text-ink-950">
                 {title}
               </Heading>
             )}
-            {intro && <p className="mt-4 text-base leading-relaxed text-ink-600">{intro}</p>}
+            {intro && <p className="mt-4 text-base leading-relaxed text-ink-700">{intro}</p>}
           </div>
         )}
         {children}

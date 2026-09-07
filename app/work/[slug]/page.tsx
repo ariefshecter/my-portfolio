@@ -79,9 +79,9 @@ function SubSection({
   children: React.ReactNode;
 }) {
   return (
-    <section aria-labelledby={`${id}-heading`} className="border-t border-ink-100 pt-8 sm:pt-10">
+    <section aria-labelledby={`${id}-heading`} className="vintage-border-t pt-8 sm:pt-10">
       {eyebrow && <p className="eyebrow mb-3">{eyebrow}</p>}
-      <h2 id={`${id}-heading`} className="font-serif text-2xl font-semibold sm:text-3xl">
+      <h2 id={`${id}-heading`} className="font-serif text-2xl font-bold tracking-tight text-ink-950 sm:text-3xl">
         {title}
       </h2>
       <div className="mt-4 sm:mt-5">{children}</div>

@@ -34,15 +34,15 @@ export function SiteHeader() {
   }, []);
 
   return (
-    <header className="sticky top-0 z-40 border-b border-ink-100 bg-paper/95 backdrop-blur-sm">
+    <header className="sticky top-0 z-40 border-b-2 border-ink-900 bg-paper/95 backdrop-blur-sm">
       <div className="container-editorial flex min-h-16 items-center justify-between gap-3 py-3 sm:h-16 sm:py-0">
         <Link
           href="/"
-          className="max-w-[13rem] font-serif text-[0.9375rem] font-semibold leading-tight tracking-tight text-ink-900 sm:max-w-none sm:text-base"
+          className="max-w-[13rem] font-serif text-[0.9375rem] font-bold tracking-tight text-ink-950 sm:max-w-none sm:text-base"
           aria-label={`${profile.name} — home`}
         >
           {profile.name}
-          <span aria-hidden="true" className="ml-2 inline-block h-1.5 w-1.5 bg-accent-400" />
+          <span aria-hidden="true" className="ml-2 inline-block h-2 w-2 bg-accent-500" />
         </Link>
 
         <nav aria-label="Primary" className="hidden sm:block">
@@ -54,10 +54,10 @@ export function SiteHeader() {
                   <Link
                     href={item.href}
                     aria-current={active ? "page" : undefined}
-                    className={`py-1 text-sm transition-colors ${
+                    className={`py-1 font-mono text-xs uppercase tracking-wider transition-colors ${
                       active
-                        ? "border-b-2 border-accent-400 font-medium text-ink-900"
-                        : "border-b-2 border-transparent text-ink-600 hover:text-ink-900"
+                        ? "border-b-2 border-accent-500 font-bold text-ink-950"
+                        : "border-b-2 border-transparent text-ink-700 hover:text-ink-950 hover:border-ink-400"
                     }`}
                   >
                     {item.label}
@@ -68,7 +68,7 @@ export function SiteHeader() {
             <li>
               <a
                 href={profile.resumePath}
-                className="rounded-editorial border border-ink-400 px-3 py-1.5 text-sm text-ink-800 transition-colors hover:border-ink-700 hover:bg-paper-muted"
+                className="rounded-editorial border-2 border-ink-900 bg-paper px-3 py-1.5 font-mono text-xs font-semibold uppercase tracking-wider text-ink-900 shadow-[2px_2px_0px_var(--color-ink-900)] transition-all hover:bg-paper-muted hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-none"
               >
                 Resume
               </a>
@@ -78,7 +78,7 @@ export function SiteHeader() {
 
         <button
           type="button"
-          className="inline-flex min-h-11 shrink-0 items-center gap-2 rounded-editorial border border-ink-400 px-3 text-sm text-ink-800 sm:hidden"
+          className="inline-flex min-h-11 shrink-0 items-center gap-2 rounded-editorial border-2 border-ink-900 bg-paper px-3 font-mono text-xs font-semibold uppercase tracking-wider text-ink-900 shadow-[2px_2px_0px_var(--color-ink-900)] sm:hidden"
           aria-expanded={open}
           aria-controls={menuId}
           onClick={() => setOpen((value) => !value)}
@@ -90,7 +90,7 @@ export function SiteHeader() {
         </button>
       </div>
 
-      <div id={menuId} hidden={!open} className="border-t border-ink-100 bg-paper-muted sm:hidden">
+      <div id={menuId} hidden={!open} className="border-t-2 border-ink-900 bg-paper-muted sm:hidden">
         <nav aria-label="Primary mobile" className="container-editorial py-3">
           <ul className="flex flex-col gap-1">
             {navItems.map((item) => {
@@ -100,10 +100,8 @@ export function SiteHeader() {
                   <Link
                     href={item.href}
                     aria-current={active ? "page" : undefined}
-                    className={`block min-h-11 border-l-2 px-3 py-3 text-sm ${
-                      active
-                        ? "border-accent-400 bg-paper font-medium text-ink-900"
-                        : "border-transparent text-ink-700"
+                    className={`block py-2 font-mono text-xs uppercase tracking-wider ${
+                      active ? "font-bold text-accent-600" : "text-ink-800"
                     }`}
                   >
                     {item.label}
@@ -111,10 +109,10 @@ export function SiteHeader() {
                 </li>
               );
             })}
-            <li>
+            <li className="pt-2">
               <a
                 href={profile.resumePath}
-                className="block min-h-11 border-l-2 border-transparent px-3 py-3 text-sm text-ink-700"
+                className="block border-2 border-ink-900 bg-paper py-2 text-center font-mono text-xs font-bold uppercase tracking-wider text-ink-900 shadow-[2px_2px_0px_var(--color-ink-900)]"
               >
                 Resume (PDF)
               </a>

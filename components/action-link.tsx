@@ -4,14 +4,14 @@ import type { ComponentPropsWithoutRef, ReactNode } from "react";
 type Variant = "primary" | "secondary" | "quiet";
 
 const base =
-  "inline-flex min-h-12 items-center justify-center gap-2 rounded-editorial px-5 py-3 text-sm font-medium transition-colors duration-150";
+  "inline-flex min-h-12 items-center justify-center gap-2 rounded-editorial px-5 py-3 text-sm font-medium tracking-wide transition-all duration-150";
 
 const variants: Record<Variant, string> = {
   primary:
-    "bg-ink-900 text-paper hover:bg-ink-700 border border-ink-900 hover:border-ink-700",
+    "bg-ink-900 text-paper hover:bg-ink-800 border-2 border-ink-900 shadow-[3px_3px_0px_var(--color-ink-800)] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[1px_1px_0px_var(--color-ink-800)]",
   secondary:
-    "border border-ink-400 bg-paper text-ink-800 hover:border-ink-700 hover:bg-paper-muted",
-  quiet: "text-ink-700 underline decoration-accent-600 decoration-2 underline-offset-4 hover:text-ink-900",
+    "border-2 border-ink-800 bg-paper text-ink-900 shadow-[3px_3px_0px_var(--color-ink-800)] hover:bg-paper-muted hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[1px_1px_0px_var(--color-ink-800)]",
+  quiet: "text-ink-800 font-medium underline decoration-accent-600 decoration-2 underline-offset-4 hover:text-ink-950 hover:decoration-ink-900",
 };
 
 interface ActionLinkProps extends Omit<ComponentPropsWithoutRef<"a">, "className"> {

@@ -8,6 +8,7 @@ export function PersonJsonLd() {
     jobTitle: profile.role,
     url: SITE_URL,
     email: `mailto:${profile.email}`,
+    telephone: profile.phone,
     image: `${SITE_URL}${profile.avatar.src}`,
     address: {
       "@type": "PostalAddress",

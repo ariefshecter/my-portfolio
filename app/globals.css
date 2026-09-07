@@ -7,34 +7,34 @@
   --font-serif: var(--font-fraunces), Georgia, "Times New Roman", serif;
   --font-mono: ui-monospace, "SFMono-Regular", "JetBrains Mono", Menlo, Monaco, monospace;
 
-  /* Editorial neutral foundation: paper white to charcoal */
-  --color-paper: #ffffff;
-  --color-paper-muted: #f7f7f5;
-  --color-paper-sunken: #f0efec;
+  /* Retro Newspaper / Vintage Warm Foundation */
+  --color-paper: #f8f5ee;
+  --color-paper-muted: #efe9db;
+  --color-paper-sunken: #e5decb;
 
-  --color-ink-50: #f6f6f5;
-  --color-ink-100: #e7e6e3;
-  --color-ink-200: #d3d1cc;
-  --color-ink-300: #8b8880;
-  --color-ink-400: #726f66;
-  --color-ink-500: #6b6862;
-  --color-ink-600: #4f4d48;
-  --color-ink-700: #3a3833;
-  --color-ink-800: #262521;
-  --color-ink-900: #171613;
+  --color-ink-50: #f6f3ea;
+  --color-ink-100: #e3dccb;
+  --color-ink-200: #c9bfab;
+  --color-ink-300: #9e917a;
+  --color-ink-400: #7b6f58;
+  --color-ink-500: #5f5442;
+  --color-ink-600: #463c2e;
+  --color-ink-700: #332a1e;
+  --color-ink-800: #241c13;
+  --color-ink-900: #16100a;
 
-  /* Restrained accent */
-  --color-accent-100: #fff4cc;
-  --color-accent-200: #ffe999;
-  --color-accent-300: #ffdd5c;
-  --color-accent-400: #f5c518;
-  --color-accent-500: #d9a400;
-  --color-accent-600: #a87c00;
-  --color-accent-700: #7a5a00;
+  /* Vintage Accents: Burnt Orange / Warm Terracotta & Heritage Ochre */
+  --color-accent-100: #faebd7;
+  --color-accent-200: #f5d6b4;
+  --color-accent-300: #e8b082;
+  --color-accent-400: #c85a17;
+  --color-accent-500: #a9430c;
+  --color-accent-600: #853106;
+  --color-accent-700: #5e2003;
 
-  --radius-editorial: 0.25rem;
+  --radius-editorial: 0.125rem;
 
-  --shadow-lift: 0 1px 2px rgba(23, 22, 19, 0.04), 0 12px 32px -20px rgba(23, 22, 19, 0.25);
+  --shadow-lift: 2px 2px 0px rgba(22, 16, 10, 0.85);
 
   --text-display: clamp(2.35rem, 6vw, 4.5rem);
   --text-display--line-height: 1.02;
@@ -61,6 +61,9 @@
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
+    background-image: radial-gradient(#241c13 0.65px, transparent 0.65px);
+    background-size: 24px 24px;
+    background-position: 0 0;
   }
 
   h1,
@@ -131,10 +134,42 @@
   .eyebrow {
     font-family: var(--font-mono);
     font-size: 0.6875rem;
-    font-weight: 500;
-    letter-spacing: 0.16em;
+    font-weight: 600;
+    letter-spacing: 0.18em;
     text-transform: uppercase;
     color: var(--color-ink-500);
+  }
+
+  /* Retro Newspaper elements */
+  .vintage-border-double {
+    border: 3px double var(--color-ink-800);
+  }
+
+  .vintage-border-t {
+    border-top: 3px double var(--color-ink-800);
+  }
+
+  .vintage-border-b {
+    border-bottom: 3px double var(--color-ink-800);
+  }
+
+  .vintage-border-box {
+    border: 1px solid var(--color-ink-700);
+    box-shadow: 3px 3px 0 var(--color-ink-800);
+  }
+
+  .vintage-stamp {
+    display: inline-block;
+    border: 2px solid var(--color-accent-600);
+    color: var(--color-accent-600);
+    padding: 0.2rem 0.6rem;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    transform: rotate(-2deg);
+    border-radius: 2px;
   }
 
   .rule-accent {
@@ -146,9 +181,9 @@
     position: absolute;
     inset-block-start: 0;
     inset-inline-start: 0;
-    width: 3rem;
-    height: 2px;
-    background-color: var(--color-accent-400);
+    width: 3.5rem;
+    height: 3px;
+    background-color: var(--color-accent-500);
   }
 }
 

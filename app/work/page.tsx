@@ -74,18 +74,21 @@ export default function WorkPage() {
       >
         <div className="space-y-10 sm:space-y-12">
           {grouped.map((group) => (
-            <div key={group.category}>
-              <h3 className="eyebrow mb-4">{group.category}</h3>
-              <ul className="divide-y divide-ink-100 border-t border-ink-100">
+            <div key={group.category} className="vintage-border-box bg-paper p-6 sm:p-8">
+              <div className="mb-4 flex items-center justify-between border-b border-ink-300 pb-2">
+                <h3 className="eyebrow text-ink-950 font-bold">{group.category}</h3>
+                <span className="font-mono text-xs text-ink-500">{group.items.length} records</span>
+              </div>
+              <ul className="divide-y divide-ink-200">
                 {group.items.map((item) => (
                   <li key={item.repositoryUrl} className="py-5 sm:py-6">
                     <div className="grid gap-2 sm:grid-cols-[1fr_auto] sm:items-start sm:gap-8">
                       <div className="max-w-2xl">
-                        <h4 className="text-base font-medium text-ink-900">{item.name}</h4>
-                        <p className="mt-1.5 text-sm leading-relaxed text-ink-600">
+                        <h4 className="font-serif text-lg font-bold text-ink-950">{item.name}</h4>
+                        <p className="mt-1.5 text-sm leading-relaxed text-ink-700">
                           {item.description}
                         </p>
-                        <p className="mt-2 font-mono text-[0.6875rem] uppercase tracking-[0.08em] text-ink-400">
+                        <p className="mt-2 font-mono text-[0.6875rem] uppercase tracking-[0.08em] text-accent-700 font-semibold">
                           {item.tech.join(" · ")}
                         </p>
                       </div>
@@ -93,9 +96,9 @@ export default function WorkPage() {
                         href={item.repositoryUrl}
                         target="_blank"
                         rel="noreferrer noopener"
-                        className="min-h-11 pt-2 text-sm text-ink-700 underline decoration-ink-400 decoration-2 underline-offset-4 hover:text-ink-900 hover:decoration-accent-600 sm:min-h-0 sm:pt-0 sm:whitespace-nowrap"
+                        className="min-h-11 pt-2 font-mono text-xs font-bold uppercase tracking-wider text-ink-900 underline decoration-accent-600 decoration-2 underline-offset-4 hover:text-accent-600 sm:min-h-0 sm:pt-0 sm:whitespace-nowrap"
                       >
-                        View repository
+                        View repository →
                         <span className="sr-only"> for {item.name} on GitHub</span>
                       </a>
                     </div>

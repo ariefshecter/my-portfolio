@@ -15,7 +15,7 @@ export function ProjectMediaFrame({
   if (media.kind === "screenshot" && media.src) {
     return (
       <figure className="not-prose">
-        <div className="overflow-hidden rounded-editorial border border-ink-200 bg-paper-sunken">
+        <div className="vintage-border-box overflow-hidden bg-paper-sunken">
           <Image
             src={media.src}
             alt={media.alt}
@@ -23,11 +23,11 @@ export function ProjectMediaFrame({
             height={media.height ?? 576}
             priority={priority}
             sizes={sizes}
-            className="h-auto w-full"
+            className="h-auto w-full sepia-[0.15] contrast-[1.05] transition-all hover:sepia-0"
           />
         </div>
-        <figcaption className="mt-3 text-sm leading-relaxed text-ink-500">
-          {media.caption}
+        <figcaption className="mt-3 font-mono text-xs leading-relaxed text-ink-600">
+          [FIG. 01] — {media.caption}
         </figcaption>
       </figure>
     );
@@ -38,16 +38,16 @@ export function ProjectMediaFrame({
       <div
         role="img"
         aria-label={media.alt}
-        className="flex min-h-56 flex-col justify-between gap-6 rounded-editorial border border-dashed border-ink-400 bg-paper-muted p-6 sm:min-h-64 sm:p-8"
+        className="vintage-border-box flex min-h-56 flex-col justify-between gap-6 border-dashed bg-paper-muted p-6 sm:min-h-64 sm:p-8"
       >
-        <span className="inline-flex w-fit items-center gap-2 rounded-editorial border border-ink-400 bg-paper px-3 py-1">
-          <span aria-hidden="true" className="h-1.5 w-1.5 bg-accent-400" />
+        <span className="inline-flex w-fit items-center gap-2 rounded-editorial border-2 border-ink-800 bg-paper px-3 py-1 shadow-[2px_2px_0px_var(--color-ink-800)]">
+          <span aria-hidden="true" className="h-2 w-2 bg-accent-500" />
           <span className="eyebrow">{media.placeholderLabel ?? "Media placeholder"}</span>
         </span>
-        <p className="max-w-xl text-sm leading-relaxed text-ink-600">{media.caption}</p>
+        <p className="max-w-xl font-mono text-sm leading-relaxed text-ink-700">{media.caption}</p>
       </div>
-      <figcaption className="mt-3 text-sm leading-relaxed text-ink-500">
-        Labelled placeholder — no screenshot is being represented as available.
+      <figcaption className="mt-3 font-mono text-xs leading-relaxed text-ink-500">
+        [ARCHIVE NOTICE] — Labelled placeholder; no screenshot is being represented as available.
       </figcaption>
     </figure>
   );

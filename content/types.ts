@@ -26,6 +26,7 @@ export interface Profile {
   role: string;
   location: string;
   email: string;
+  phone: string;
   githubUrl: string;
   linkedinUrl: string;
   canonicalUrl: string;

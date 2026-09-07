@@ -93,6 +93,7 @@ describe("content model integrity", () => {
   it("keeps profile identity fields verified and free of placeholders", () => {
     expect(profile.role).toBe("Junior Full Stack Developer");
     expect(profile.email).toBe("ceryover@gmail.com");
+    expect(profile.phone).toBe("087790239132");
     expect(profile.linkedinUrl).toBe(
       "https://www.linkedin.com/in/ferry-khusnil-arief/",
     );

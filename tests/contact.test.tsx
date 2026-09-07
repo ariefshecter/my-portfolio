@@ -17,6 +17,14 @@ describe("contact actions", () => {
     expect(mailLinks[0]).toHaveAttribute("href", `mailto:${profile.email}`);
   });
 
+  it("links the verified phone number", () => {
+    const { container } = render(<ContactCta />);
+
+    expect(container.querySelector(`a[href="tel:${profile.phone}"]`)).toHaveTextContent(
+      profile.phone,
+    );
+  });
+
   it("links GitHub, LinkedIn, and the resume from the CTA or footer", () => {
     const { container } = render(
       <>

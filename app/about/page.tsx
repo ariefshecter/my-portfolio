@@ -52,31 +52,33 @@ export default function AboutPage() {
             </div>
 
             <div>
-              <div className="overflow-hidden rounded-editorial border border-ink-200 bg-paper-sunken">
+              <div className="vintage-border-box overflow-hidden bg-paper-sunken">
                 <Image
                   src={profile.avatar.src}
                   alt={profile.avatar.alt}
                   width={720}
                   height={720}
                   sizes="(min-width: 1024px) 24rem, (min-width: 640px) 60vw, 100vw"
-                  className="h-auto w-full"
+                  className="h-auto w-full sepia-[0.12] contrast-[1.05]"
                   priority
                 />
               </div>
-              <dl className="mt-5 grid gap-x-6 gap-y-4 sm:mt-6 sm:grid-cols-2">
-                <div>
-                  <dt className="eyebrow mb-1.5">Role</dt>
-                  <dd className="text-sm text-ink-700">{profile.role}</dd>
-                </div>
-                <div>
-                  <dt className="eyebrow mb-1.5">Location</dt>
-                  <dd className="text-sm text-ink-700">{profile.location}</dd>
-                </div>
-                <div className="sm:col-span-2">
-                  <dt className="eyebrow mb-1.5">Availability</dt>
-                  <dd className="text-sm text-ink-700">{profile.availability}</dd>
-                </div>
-              </dl>
+              <div className="vintage-border-box mt-5 bg-paper p-5 sm:mt-6">
+                <dl className="grid gap-x-6 gap-y-4 sm:grid-cols-2">
+                  <div>
+                    <dt className="eyebrow mb-1.5">Role</dt>
+                    <dd className="font-mono text-sm font-medium text-ink-800">{profile.role}</dd>
+                  </div>
+                  <div>
+                    <dt className="eyebrow mb-1.5">Location</dt>
+                    <dd className="font-mono text-sm font-medium text-ink-800">{profile.location}</dd>
+                  </div>
+                  <div className="sm:col-span-2 border-t border-ink-200 pt-3">
+                    <dt className="eyebrow mb-1.5">Availability</dt>
+                    <dd className="font-mono text-sm font-medium text-ink-800">{profile.availability}</dd>
+                  </div>
+                </dl>
+              </div>
             </div>
           </div>
         </div>
