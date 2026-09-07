@@ -11,11 +11,6 @@ interface CaseStudyPageProps {
   params: Promise<{ slug: string }>;
 }
 
-/**
- * Only the known case-study slugs are valid routes. Anything else resolves to the
- * static not-found page instead of being rendered on demand, so a deep link to a
- * missing slug returns real 404 markup even without client-side JavaScript.
- */
 export const dynamicParams = false;
 
 export function generateStaticParams() {
@@ -80,11 +75,11 @@ function SubSection({
 }) {
   return (
     <section aria-labelledby={`${id}-heading`} className="vintage-border-t pt-8 sm:pt-10">
-      {eyebrow && <p className="eyebrow mb-3">{eyebrow}</p>}
+      {eyebrow && <p className="eyebrow mb-2">{eyebrow}</p>}
       <h2 id={`${id}-heading`} className="font-serif text-2xl font-bold tracking-tight text-ink-950 sm:text-3xl">
         {title}
       </h2>
-      <div className="mt-4 sm:mt-5">{children}</div>
+      <div className="mt-4 sm:mt-5 text-ink-800">{children}</div>
     </section>
   );
 }
@@ -101,162 +96,142 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
 
   return (
     <>
-      <article>
-        <header className="py-14 sm:py-20">
-          <div className="container-editorial">
-            <nav aria-label="Breadcrumb" className="mb-7 sm:mb-8">
-              <ol className="flex flex-wrap items-center gap-2 font-mono text-xs uppercase tracking-[0.12em] text-ink-400">
-                <li>
-                  <Link href="/work" className="hover:text-ink-700">
-                    Work
-                  </Link>
-                </li>
-                <li aria-hidden="true">/</li>
-                <li className="text-ink-600">{project.shortLabel}</li>
-              </ol>
+      <article className="py-12 sm:py-20">
+        <div className="container-editorial">
+          <div className="vintage-panel p-6 sm:p-10 lg:p-12">
+            <nav aria-label="Breadcrumb" className="mb-6 font-mono text-xs uppercase tracking-wider text-ink-600">
+              <Link href="/work" className="underline hover:text-ink-950">
+                Work
+              </Link>{" "}
+              / <span className="text-ink-950 font-bold">{project.title}</span>
             </nav>
 
-            <div className="max-w-3xl">
-              <p className="eyebrow mb-4">
-                {project.year} · {project.primaryStack.join(" · ")}
-              </p>
-              <h1 className="text-display font-serif font-semibold">{project.title}</h1>
-              <p className="mt-5 text-lg leading-relaxed text-ink-600 sm:mt-6 sm:text-xl">
-                {project.outcome}
-              </p>
-              <p className="mt-5 text-base leading-relaxed text-ink-600">{project.description}</p>
-              <div className="mt-7 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm sm:mt-8">
-                <ProjectLinks project={project} />
-              </div>
+            <div className="flex flex-wrap items-center gap-3 mb-4">
+              <span className="vintage-stamp">Field Dossier</span>
+              <span className="font-mono text-xs font-bold text-accent-700 uppercase">
+                EST. {project.year} // {caseStudy.role}
+              </span>
             </div>
-          </div>
-        </header>
 
-        <div className="container-editorial pb-14 sm:pb-20">
-          <div className="space-y-9 sm:space-y-10">
-            {project.media.map((media, index) => (
+            <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-black text-ink-950 tracking-tight leading-tight">
+              {project.title}
+            </h1>
+
+            <p className="mt-5 max-w-3xl font-serif text-lg sm:text-xl leading-relaxed text-ink-800 italic border-l-4 border-accent-500 pl-4 bg-paper-muted py-2">
+              {project.outcome}
+            </p>
+
+            <div className="mt-6">
+              <TagList items={project.primaryStack} label={`Primary stack for ${project.title}`} />
+            </div>
+
+            <div className="mt-8">
               <ProjectMediaFrame
-                key={media.src ?? `${project.slug}-media-${index}`}
-                media={media}
-                priority={index === 0}
+                media={project.media[0]!}
+                priority
+                sizes="(min-width: 1024px) 62rem, 100vw"
               />
-            ))}
+            </div>
 
-            <SubSection id="problem" eyebrow="Context" title="The problem">
-              <div className="max-w-2xl space-y-4 text-base leading-relaxed text-ink-600">
-                {caseStudy.problem.map((paragraph) => (
-                  <p key={paragraph}>{paragraph}</p>
-                ))}
-              </div>
-            </SubSection>
-
-            <SubSection id="role" eyebrow="Ownership" title="Role and contribution">
-              <p className="max-w-2xl text-base leading-relaxed text-ink-700">{caseStudy.role}</p>
-              <ul className="mt-6 max-w-2xl space-y-3">
-                {caseStudy.contribution.map((item) => (
-                  <li key={item} className="flex gap-3 text-base leading-relaxed text-ink-600">
-                    <span aria-hidden="true" className="mt-2.5 h-1 w-3 shrink-0 bg-accent-400" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </SubSection>
-
-            <SubSection id="architecture" eyebrow="System" title="Architecture">
-              <p className="max-w-2xl text-base leading-relaxed text-ink-600">
-                {caseStudy.architectureSummary}
-              </p>
-              <ol className="mt-8 space-y-0 border-t border-ink-100">
-                {caseStudy.architecture.map((layer, index) => (
-                  <li
-                    key={layer.label}
-                    className="grid gap-2 border-b border-ink-100 py-5 sm:grid-cols-[auto_1fr] sm:gap-8"
-                  >
-                    <p
-                      aria-hidden="true"
-                      className="font-mono text-xs uppercase tracking-[0.12em] text-ink-300 sm:pt-1"
-                    >
-                      L{index + 1}
+            <div className="mt-12 space-y-12 max-w-4xl">
+              <SubSection id="problem" eyebrow="Context" title="The problem">
+                <div className="space-y-4">
+                  {caseStudy.problem.map((para) => (
+                    <p key={para} className="leading-relaxed sm:text-lg">
+                      {para}
                     </p>
-                    <div>
-                      <h3 className="text-base font-medium text-ink-900">{layer.label}</h3>
-                      <p className="mt-1.5 max-w-2xl text-sm leading-relaxed text-ink-600">
-                        {layer.detail}
+                  ))}
+                </div>
+              </SubSection>
+
+              <SubSection id="contribution" eyebrow="Ownership" title="Role and contribution">
+                <div className="space-y-4">
+                  {caseStudy.contribution.map((para) => (
+                    <p key={para} className="leading-relaxed sm:text-lg">
+                      {para}
+                    </p>
+                  ))}
+                </div>
+              </SubSection>
+
+              <SubSection id="architecture" eyebrow="System Design" title="Architecture">
+                <p className="leading-relaxed sm:text-lg">{caseStudy.architectureSummary}</p>
+                <div className="mt-6 grid gap-4 sm:grid-cols-2">
+                  {caseStudy.architecture.map((item) => (
+                    <div key={item.label} className="vintage-border-box p-4 bg-paper">
+                      <p className="font-mono text-xs font-bold uppercase text-accent-700 mb-1">
+                        {item.label}
                       </p>
+                      <p className="text-xs sm:text-sm text-ink-700">{item.detail}</p>
                     </div>
-                  </li>
-                ))}
-              </ol>
-            </SubSection>
+                  ))}
+                </div>
+              </SubSection>
 
-            <SubSection id="stack" eyebrow="Implementation" title="Stack detail">
-              <dl className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-                {caseStudy.stack.map((section) => (
-                  <div key={section.label}>
-                    <dt className="eyebrow mb-3">{section.label}</dt>
-                    <dd>
-                      <TagList items={section.items} label={`${section.label} technologies`} />
-                    </dd>
+              <SubSection id="stack" eyebrow="Components" title="Stack detail">
+                <div className="grid gap-4 sm:grid-cols-2">
+                  {caseStudy.stack.map((item) => (
+                    <div key={item.label} className="vintage-border-box p-4 bg-paper">
+                      <p className="font-mono text-xs font-bold uppercase text-accent-700 mb-2">
+                        {item.label}
+                      </p>
+                      <ul className="space-y-1 font-mono text-xs text-ink-900">
+                        {item.items.map((tech) => (
+                          <li key={tech} className="list-disc list-inside">
+                            {tech}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
+              </SubSection>
+
+              <SubSection id="decisions" eyebrow="Rationale" title="Key decisions">
+                <ul className="space-y-4">
+                  {caseStudy.decisions.map((decision) => (
+                    <li key={decision.title} className="vintage-border-box p-5 bg-paper">
+                      <h3 className="font-serif text-base font-bold text-ink-950">{decision.title}</h3>
+                      <p className="mt-1 text-sm text-ink-700">{decision.detail}</p>
+                    </li>
+                  ))}
+                </ul>
+              </SubSection>
+
+              <SubSection id="challenges" eyebrow="Hard Problems" title="Challenges">
+                <ul className="space-y-4">
+                  {caseStudy.challenges.map((challenge) => (
+                    <li key={challenge.title} className="vintage-border-box p-5 bg-paper">
+                      <h3 className="font-serif text-base font-bold text-ink-950">{challenge.title}</h3>
+                      <p className="mt-1 text-sm text-ink-700">{challenge.detail}</p>
+                    </li>
+                  ))}
+                </ul>
+              </SubSection>
+
+              <SubSection id="limitations" eyebrow="Honest Reflection" title="Limitations and next steps">
+                <ul className="space-y-3">
+                  {caseStudy.limitations.map((limitation) => (
+                    <li key={limitation} className="text-sm leading-relaxed text-ink-700 list-disc list-inside">
+                      {limitation}
+                    </li>
+                  ))}
+                </ul>
+              </SubSection>
+
+              <SubSection id="links" eyebrow="Verification" title="Source and deployment">
+                <div className="vintage-border-box p-6 bg-paper">
+                  <div className="flex flex-wrap items-center gap-6">
+                    <ProjectLinks project={project} />
                   </div>
-                ))}
-              </dl>
-            </SubSection>
-
-            <SubSection id="decisions" eyebrow="Reasoning" title="Key decisions">
-              <ul className="grid gap-6 sm:grid-cols-2">
-                {caseStudy.decisions.map((decision) => (
-                  <li
-                    key={decision.title}
-                    className="rounded-editorial border border-ink-100 bg-paper-muted p-5"
-                  >
-                    <h3 className="text-base font-medium text-ink-900">{decision.title}</h3>
-                    <p className="mt-2 text-sm leading-relaxed text-ink-600">{decision.detail}</p>
-                  </li>
-                ))}
-              </ul>
-            </SubSection>
-
-            <SubSection id="challenges" eyebrow="Friction" title="Challenges">
-              <ul className="max-w-2xl space-y-6">
-                {caseStudy.challenges.map((challenge) => (
-                  <li key={challenge.title} className="rule-accent pt-5">
-                    <h3 className="text-base font-medium text-ink-900">{challenge.title}</h3>
-                    <p className="mt-2 text-sm leading-relaxed text-ink-600">{challenge.detail}</p>
-                  </li>
-                ))}
-              </ul>
-            </SubSection>
-
-            <SubSection id="limitations" eyebrow="Honest scope" title="Limitations and next steps">
-              <ul className="max-w-2xl space-y-3">
-                {caseStudy.limitations.map((limitation) => (
-                  <li key={limitation} className="flex gap-3 text-base leading-relaxed text-ink-600">
-                    <span aria-hidden="true" className="mt-2.5 h-1 w-3 shrink-0 bg-ink-300" />
-                    <span>{limitation}</span>
-                  </li>
-                ))}
-              </ul>
-            </SubSection>
-
-            <SubSection id="links" eyebrow="Verify" title="Source and deployment">
-              <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-base">
-                <ProjectLinks project={project} />
-              </div>
-              {!project.liveUrl && (
-                <p className="mt-4 max-w-2xl text-sm leading-relaxed text-ink-500">
-                  This project runs locally and has no public deployment, so no live demo link is
-                  offered.
-                </p>
-              )}
-              <p className="mt-8 text-sm">
-                <Link
-                  href="/work"
-                  className="font-medium text-ink-900 underline decoration-accent-600 decoration-2 underline-offset-4"
-                >
-                  Back to all work
-                </Link>
-              </p>
-            </SubSection>
+                  {!project.liveUrl && (
+                    <p className="mt-4 font-mono text-xs text-ink-600 border-t border-ink-200 pt-3">
+                      [DISCLOSURE] — Internal university or client codebase; no live demo link is offered. Repository code is accessible above.
+                    </p>
+                  )}
+                </div>
+              </SubSection>
+            </div>
           </div>
         </div>
       </article>

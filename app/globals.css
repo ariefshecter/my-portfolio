@@ -7,34 +7,34 @@
   --font-serif: var(--font-fraunces), Georgia, "Times New Roman", serif;
   --font-mono: ui-monospace, "SFMono-Regular", "JetBrains Mono", Menlo, Monaco, monospace;
 
-  /* Retro Newspaper / Vintage Warm Foundation */
-  --color-paper: #f8f5ee;
-  --color-paper-muted: #efe9db;
-  --color-paper-sunken: #e5decb;
+  /* Retro Newspaper / Vintage Warm Strong Paper Foundation */
+  --color-paper: #f4ece1;
+  --color-paper-muted: #e8dcc8;
+  --color-paper-sunken: #ddcdb4;
 
-  --color-ink-50: #f6f3ea;
-  --color-ink-100: #e3dccb;
-  --color-ink-200: #c9bfab;
-  --color-ink-300: #9e917a;
-  --color-ink-400: #7b6f58;
-  --color-ink-500: #5f5442;
-  --color-ink-600: #463c2e;
-  --color-ink-700: #332a1e;
-  --color-ink-800: #241c13;
-  --color-ink-900: #16100a;
+  --color-ink-50: #efe4d0;
+  --color-ink-100: #dfcfb2;
+  --color-ink-200: #c4b08b;
+  --color-ink-300: #9c825a;
+  --color-ink-400: #7a613b;
+  --color-ink-500: #5c4728;
+  --color-ink-600: #42321b;
+  --color-ink-700: #302312;
+  --color-ink-800: #20170a;
+  --color-ink-900: #120c05;
 
-  /* Vintage Accents: Burnt Orange / Warm Terracotta & Heritage Ochre */
-  --color-accent-100: #faebd7;
-  --color-accent-200: #f5d6b4;
-  --color-accent-300: #e8b082;
-  --color-accent-400: #c85a17;
-  --color-accent-500: #a9430c;
-  --color-accent-600: #853106;
-  --color-accent-700: #5e2003;
+  /* Rich Vintage Amber / Espresso Brown Accents */
+  --color-accent-100: #f2e1c9;
+  --color-accent-200: #e4be90;
+  --color-accent-300: #ce9450;
+  --color-accent-400: #b86b1f;
+  --color-accent-500: #9c5010;
+  --color-accent-600: #7b3a08;
+  --color-accent-700: #552402;
 
-  --radius-editorial: 0.125rem;
+  --radius-editorial: 0px;
 
-  --shadow-lift: 2px 2px 0px rgba(22, 16, 10, 0.85);
+  --shadow-lift: 3px 3px 0px #20170a;
 
   --text-display: clamp(2.35rem, 6vw, 4.5rem);
   --text-display--line-height: 1.02;
@@ -61,9 +61,11 @@
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
-    background-image: radial-gradient(#241c13 0.65px, transparent 0.65px);
-    background-size: 24px 24px;
-    background-position: 0 0;
+    background-image: 
+      linear-gradient(rgba(32, 23, 10, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(32, 23, 10, 0.05) 1px, transparent 1px);
+    background-size: 28px 28px;
+    background-position: -1px -1px;
   }
 
   h1,
@@ -142,34 +144,41 @@
 
   /* Retro Newspaper elements */
   .vintage-border-double {
-    border: 3px double var(--color-ink-800);
+    border: 4px double var(--color-ink-800);
   }
 
   .vintage-border-t {
-    border-top: 3px double var(--color-ink-800);
+    border-top: 4px double var(--color-ink-800);
   }
 
   .vintage-border-b {
-    border-bottom: 3px double var(--color-ink-800);
+    border-bottom: 4px double var(--color-ink-800);
   }
 
   .vintage-border-box {
-    border: 1px solid var(--color-ink-700);
-    box-shadow: 3px 3px 0 var(--color-ink-800);
+    border: 2px solid var(--color-ink-800);
+    box-shadow: 4px 4px 0 var(--color-ink-800);
+    background-color: var(--color-paper-muted);
+  }
+
+  .vintage-panel {
+    border: 2px solid var(--color-ink-800);
+    background-color: var(--color-paper);
+    box-shadow: 5px 5px 0 var(--color-ink-800);
   }
 
   .vintage-stamp {
     display: inline-block;
     border: 2px solid var(--color-accent-600);
-    color: var(--color-accent-600);
-    padding: 0.2rem 0.6rem;
+    color: var(--color-accent-700);
+    background-color: var(--color-paper-sunken);
+    padding: 0.25rem 0.65rem;
     font-family: var(--font-mono);
     font-size: 0.75rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.12em;
     transform: rotate(-2deg);
-    border-radius: 2px;
   }
 
   .rule-accent {

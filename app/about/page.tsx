@@ -29,55 +29,67 @@ const kindLabel: Record<string, string> = {
 export default function AboutPage() {
   return (
     <>
-      <section aria-labelledby="about-heading" className="py-14 sm:py-20">
+      <section aria-labelledby="about-heading" className="py-12 sm:py-20">
         <div className="container-editorial">
-          <div className="grid gap-9 lg:grid-cols-[1.3fr_1fr] lg:items-start lg:gap-12">
-            <div className="max-w-2xl">
-              <p className="eyebrow mb-4">About</p>
-              <h1 id="about-heading" className="text-display font-serif font-semibold">
-                {profile.headline}
-              </h1>
-              <p className="mt-7 text-lg leading-relaxed text-ink-600">{profile.summary}</p>
-              <div className="mobile-stack-actions mt-8 gap-3 sm:mt-9">
-                <ActionLink href={profile.resumePath} variant="primary">
-                  Download resume
-                </ActionLink>
-                <ActionLink href={profile.githubUrl} variant="secondary" external>
-                  GitHub
-                </ActionLink>
-                <ActionLink href={profile.linkedinUrl} variant="secondary" external>
-                  LinkedIn
-                </ActionLink>
-              </div>
-            </div>
+          <div className="vintage-panel p-6 sm:p-10 lg:p-12">
+            <div className="grid gap-10 lg:grid-cols-[1.3fr_1fr] lg:items-start lg:gap-14">
+              <div>
+                <div className="mb-4 flex items-center gap-3">
+                  <span className="vintage-stamp">Dossier</span>
+                  <p className="eyebrow">Personnel Record</p>
+                </div>
+                <h1 id="about-heading" className="font-serif text-3xl sm:text-4xl lg:text-5xl font-black text-ink-950 tracking-tight leading-tight">
+                  {profile.headline}
+                </h1>
+                <p className="mt-6 text-base sm:text-lg leading-relaxed text-ink-800 font-sans border-l-4 border-accent-500 pl-4 bg-paper-muted py-2">
+                  {profile.summary}
+                </p>
 
-            <div>
-              <div className="vintage-border-box overflow-hidden bg-paper-sunken">
-                <Image
-                  src={profile.avatar.src}
-                  alt={profile.avatar.alt}
-                  width={720}
-                  height={720}
-                  sizes="(min-width: 1024px) 24rem, (min-width: 640px) 60vw, 100vw"
-                  className="h-auto w-full sepia-[0.12] contrast-[1.05]"
-                  priority
-                />
+                <div className="mobile-stack-actions mt-8 gap-3 sm:mt-9">
+                  <ActionLink href={profile.resumePath} variant="primary">
+                    Download resume
+                  </ActionLink>
+                  <ActionLink href={profile.githubUrl} variant="secondary" external>
+                    GitHub
+                  </ActionLink>
+                  <ActionLink href={profile.linkedinUrl} variant="secondary" external>
+                    LinkedIn
+                  </ActionLink>
+                </div>
               </div>
-              <div className="vintage-border-box mt-5 bg-paper p-5 sm:mt-6">
-                <dl className="grid gap-x-6 gap-y-4 sm:grid-cols-2">
-                  <div>
-                    <dt className="eyebrow mb-1.5">Role</dt>
-                    <dd className="font-mono text-sm font-medium text-ink-800">{profile.role}</dd>
+
+              <div>
+                <div className="vintage-border-box overflow-hidden bg-paper-sunken p-2">
+                  <Image
+                    src={profile.avatar.src}
+                    alt={profile.avatar.alt}
+                    width={720}
+                    height={720}
+                    sizes="(min-width: 1024px) 24rem, (min-width: 640px) 60vw, 100vw"
+                    className="h-auto w-full sepia-[0.2] contrast-[1.08] border border-ink-800"
+                    priority
+                  />
+                  <div className="pt-2 text-center font-mono text-[0.65rem] uppercase tracking-widest text-ink-600">
+                    IDENTIFICATION RECORD // 2026
                   </div>
-                  <div>
-                    <dt className="eyebrow mb-1.5">Location</dt>
-                    <dd className="font-mono text-sm font-medium text-ink-800">{profile.location}</dd>
-                  </div>
-                  <div className="sm:col-span-2 border-t border-ink-200 pt-3">
-                    <dt className="eyebrow mb-1.5">Availability</dt>
-                    <dd className="font-mono text-sm font-medium text-ink-800">{profile.availability}</dd>
-                  </div>
-                </dl>
+                </div>
+
+                <div className="vintage-border-box mt-5 bg-paper-sunken p-5 sm:mt-6">
+                  <dl className="grid gap-x-6 gap-y-4 sm:grid-cols-2">
+                    <div>
+                      <dt className="eyebrow mb-1 text-accent-700">Role</dt>
+                      <dd className="font-mono text-sm font-bold text-ink-900">{profile.role}</dd>
+                    </div>
+                    <div>
+                      <dt className="eyebrow mb-1 text-accent-700">Location</dt>
+                      <dd className="font-mono text-sm font-bold text-ink-900">{profile.location}</dd>
+                    </div>
+                    <div className="sm:col-span-2 border-t border-ink-300 pt-3">
+                      <dt className="eyebrow mb-1 text-accent-700">Availability</dt>
+                      <dd className="font-mono text-sm font-bold text-ink-900">{profile.availability}</dd>
+                    </div>
+                  </dl>
+                </div>
               </div>
             </div>
           </div>
@@ -90,27 +102,32 @@ export default function AboutPage() {
         title="A complementary profile"
         intro="Three strands of work that reinforce each other rather than three unrelated interests."
       >
-        <div className="grid gap-7 sm:grid-cols-3 sm:gap-8">
-          <div className="rule-accent pt-6">
-            <h3 className="text-base font-medium text-ink-900">Web application development</h3>
-            <p className="mt-2 text-sm leading-relaxed text-ink-600">
+        <div className="grid gap-6 sm:grid-cols-3 sm:gap-8">
+          <div className="vintage-border-box bg-paper p-6">
+            <span className="font-mono text-xs font-bold text-accent-700 uppercase tracking-widest">STRAND I</span>
+            <h3 className="mt-2 font-serif text-lg font-bold text-ink-950">Web application development</h3>
+            <p className="mt-3 text-sm leading-relaxed text-ink-700">
               Typed Next.js and React interfaces, Blade templates, responsive layout, and
               accessible interaction states. I care about the states a screen has, not only its
               happy path.
             </p>
           </div>
-          <div className="rule-accent pt-6">
-            <h3 className="text-base font-medium text-ink-900">Backend and data workflows</h3>
-            <p className="mt-2 text-sm leading-relaxed text-ink-600">
-              Go/Fiber and Laravel APIs, JWT and session authentication, role-based access,
-              relational schema design with PostgreSQL and MySQL, and document generation.
+          <div className="vintage-border-box bg-paper p-6">
+            <span className="font-mono text-xs font-bold text-accent-700 uppercase tracking-widest">STRAND II</span>
+            <h3 className="mt-2 font-serif text-lg font-bold text-ink-950">Backend APIs &amp; schemas</h3>
+            <p className="mt-3 text-sm leading-relaxed text-ink-700">
+              Clean HTTP endpoints, explicit request validation, database transactions, and
+              relational models that match the real domain. I would rather make invalid state
+              unrepresentable than patch it after deployment.
             </p>
           </div>
-          <div className="rule-accent pt-6">
-            <h3 className="text-base font-medium text-ink-900">Practical ML experimentation</h3>
-            <p className="mt-2 text-sm leading-relaxed text-ink-600">
-              Python notebooks covering CNN image classification and K-Means clustering. Not a
-              research career — a habit of validating assumptions against data.
+          <div className="vintage-border-box bg-paper p-6">
+            <span className="font-mono text-xs font-bold text-accent-700 uppercase tracking-widest">STRAND III</span>
+            <h3 className="mt-2 font-serif text-lg font-bold text-ink-950">Applied ML &amp; product data</h3>
+            <p className="mt-3 text-sm leading-relaxed text-ink-700">
+              Feature extraction, classification workflows, and model evaluations that answer
+              product questions. ML work taught me to distrust intuition and test against real
+              distributions.
             </p>
           </div>
         </div>
@@ -118,21 +135,18 @@ export default function AboutPage() {
 
       <Section
         id="skills"
-        eyebrow="Evidence"
+        eyebrow="Capabilities"
         title="Skills by category"
-        intro="Grouped by where I have actually shipped something. Each group maps to code in a public repository."
+        intro="Grouped by how they appear in my work. Listed where I have produced working systems or coursework, not where I have only read the documentation."
       >
-        <div className="space-y-0 border-t border-ink-100">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {skillGroups.map((group) => (
-            <div
-              key={group.id}
-              className="grid gap-4 border-b border-ink-100 py-6 sm:py-7 lg:grid-cols-[14rem_1fr] lg:gap-10"
-            >
-              <div>
-                <h3 className="text-base font-medium text-ink-900">{group.label}</h3>
-                <p className="mt-1.5 text-sm leading-relaxed text-ink-500">{group.summary}</p>
-              </div>
-              <TagList items={group.skills} label={`${group.label} skills`} className="lg:pt-1" />
+            <div key={group.id} className="vintage-border-box bg-paper p-5">
+              <h3 className="font-mono text-xs font-bold uppercase tracking-wider text-accent-700 border-b-2 border-ink-800 pb-2">
+                {group.label}
+              </h3>
+              <p className="mt-2 text-xs text-ink-600 italic">{group.summary}</p>
+              <TagList items={group.skills} label={group.label} className="mt-4" />
             </div>
           ))}
         </div>
@@ -141,43 +155,32 @@ export default function AboutPage() {
       <Section
         id="experience"
         eyebrow="History"
-        title="Experience and selected work"
-        intro="Internship experience alongside personal projects, coursework, and research."
+        title="Experience &amp; milestones"
+        intro="Internship work, education, and significant build phases. Each entry reflects real responsibilities and deliverables."
       >
-        <ol className="space-y-0 border-t border-ink-100">
-          {experience.map((entry) => (
-            <li key={entry.id} className="border-b border-ink-100 py-7 sm:py-8">
-              <div className="grid gap-4 lg:grid-cols-[12rem_1fr] lg:gap-10">
+        <ol className="space-y-6">
+          {experience.map((item) => (
+            <li key={`${item.title}-${item.period}`} className="vintage-border-box bg-paper p-6 sm:p-7">
+              <div className="flex flex-wrap items-baseline justify-between gap-2 border-b border-ink-300 pb-2">
                 <div>
-                  <p className="font-mono text-xs uppercase tracking-[0.12em] text-ink-400">
-                    {entry.period}
-                  </p>
-                  <p className="mt-2 inline-flex rounded-editorial border border-ink-100 bg-paper-muted px-2 py-0.5 font-mono text-[0.625rem] uppercase tracking-[0.1em] text-ink-500">
-                    {kindLabel[entry.kind] ?? entry.kind}
-                  </p>
+                  <span className="mr-2 font-mono text-[0.65rem] font-bold uppercase tracking-wider text-accent-700 border border-accent-600 px-1.5 py-0.5">
+                    {kindLabel[item.kind] ?? item.kind}
+                  </span>
+                  <h3 className="inline font-serif text-lg font-bold text-ink-950">{item.title}</h3>
                 </div>
-                <div className="max-w-2xl">
-                  <h3 className="text-base font-medium text-ink-900">{entry.title}</h3>
-                  <p className="mt-1 text-sm text-ink-500">
-                    {entry.organization} · {entry.location}
-                  </p>
-                  <p className="mt-3 text-sm leading-relaxed text-ink-600">{entry.description}</p>
-                  <ul className="mt-4 space-y-2">
-                    {entry.highlights.map((highlight) => (
-                      <li
-                        key={highlight}
-                        className="flex gap-3 text-sm leading-relaxed text-ink-600"
-                      >
-                        <span
-                          aria-hidden="true"
-                          className="mt-2 h-1 w-3 shrink-0 bg-accent-400"
-                        />
-                        <span>{highlight}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+                <span className="font-mono text-xs text-ink-600 font-semibold">{item.period}</span>
               </div>
+              <p className="mt-2 font-mono text-xs text-ink-700">{item.organization}</p>
+              <p className="mt-3 text-sm leading-relaxed text-ink-700">{item.description}</p>
+              {item.highlights && item.highlights.length > 0 ? (
+                <ul className="mt-4 space-y-1.5 border-t border-ink-200 pt-3">
+                  {item.highlights.map((highlight) => (
+                    <li key={highlight} className="text-xs text-ink-600 list-disc list-inside">
+                      {highlight}
+                    </li>
+                  ))}
+                </ul>
+              ) : null}
             </li>
           ))}
         </ol>

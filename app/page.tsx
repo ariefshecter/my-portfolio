@@ -14,58 +14,80 @@ const leadProject = featuredProjects[0];
 export default function HomePage() {
   return (
     <>
-      <section aria-labelledby="intro-heading" className="py-14 sm:py-24">
+      {/* Front-page Gazette Masthead */}
+      <div className="border-b-4 border-ink-900 bg-paper-sunken py-3">
         <div className="container-editorial">
-          {/* Retro Newspaper Header Masthead */}
-          <div className="mb-10 vintage-border-b pb-4 text-center">
-            <div className="flex flex-wrap items-center justify-between border-b border-ink-300 pb-1.5 font-mono text-[0.6875rem] uppercase tracking-wider text-ink-600">
-              <span>EDITION: PERSONAL ARCHIVE</span>
-              <span>DEV DISPATCH & FIELD REPORT</span>
-              <span>{profile.location.toUpperCase()}</span>
-            </div>
+          <div className="flex flex-col gap-2 border-y-2 border-ink-800 py-2 sm:flex-row sm:items-center sm:justify-between font-mono text-[0.7rem] uppercase tracking-widest text-ink-700">
+            <span className="font-bold">VOL. 02 — SPECIAL PORTFOLIO ISSUE</span>
+            <span className="hidden sm:inline">OFFICIAL GAZETTE &amp; WORK ARCHIVE</span>
+            <span className="font-semibold">{profile.location.toUpperCase()} · EST. 2026</span>
           </div>
+        </div>
+      </div>
 
-          <div className="grid gap-10 lg:grid-cols-[1.15fr_1fr] lg:items-end lg:gap-12">
-            <div className="max-w-2xl">
-              <div className="mb-4 flex items-center gap-3">
-                <span className="vintage-stamp">Certified Portfolio</span>
-                <p className="eyebrow">
-                  {profile.role}
+      <section aria-labelledby="intro-heading" className="py-12 sm:py-20">
+        <div className="container-editorial">
+          <div className="vintage-panel p-6 sm:p-10 lg:p-12">
+            <div className="grid gap-10 lg:grid-cols-[1.25fr_1fr] lg:items-start lg:gap-14">
+              <div>
+                <div className="mb-4 flex flex-wrap items-center gap-3">
+                  <span className="vintage-stamp">Available for Hire</span>
+                  <span className="font-mono text-xs font-semibold uppercase tracking-wider text-ink-600">
+                    {profile.role}
+                  </span>
+                </div>
+
+                <h1
+                  id="intro-heading"
+                  className="font-serif text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-ink-950 leading-[1.05]"
+                >
+                  {profile.name}
+                </h1>
+
+                <p className="mt-6 font-serif text-lg sm:text-xl leading-relaxed text-ink-800 italic border-l-4 border-accent-500 pl-4 bg-paper-muted py-2">
+                  &ldquo;Building resilient web applications end to end: typed Next.js interfaces,
+                  robust Laravel &amp; Go APIs, and structured relational workflows.&rdquo;
                 </p>
-              </div>
-              <h1 id="intro-heading" className="text-display font-serif font-bold tracking-tight text-ink-950">
-                {profile.name}
-              </h1>
-              <p className="mt-6 max-w-xl text-lg leading-relaxed text-ink-700 sm:text-xl">
-                I build web systems end to end: typed Next.js interfaces, Laravel and Go APIs,
-                relational data models, and the authentication and reporting workflows that make
-                them usable. Applied Python and machine learning work shapes how I read product
-                data.
-              </p>
-              <div className="mobile-stack-actions mt-8 gap-3 sm:mt-9">
-                <ActionLink href="/work" variant="primary">
-                  View selected work
-                </ActionLink>
-                <ActionLink href={profile.resumePath} variant="secondary">
-                  Download resume
-                </ActionLink>
-              </div>
-            </div>
 
-            <div className="vintage-border-box bg-paper p-6 sm:p-7">
-              <div className="mb-4 border-b border-ink-300 pb-2">
-                <span className="eyebrow font-bold text-ink-900">CORE COMPETENCIES & INDEX</span>
+                <p className="mt-5 text-base sm:text-lg leading-relaxed text-ink-700 font-sans">
+                  Specialized in modern web engineering backed by practical machine learning analysis.
+                  Delivering clean architectures, typed APIs, relational schema clarity, and verifiable production code.
+                </p>
+
+                <div className="mobile-stack-actions mt-8 gap-4 sm:mt-10">
+                  <ActionLink href="/work" variant="primary">
+                    View selected work
+                  </ActionLink>
+                  <ActionLink href={profile.resumePath} variant="secondary">
+                    Download resume
+                  </ActionLink>
+                </div>
               </div>
-              <dl className="grid grid-cols-2 gap-x-5 gap-y-5">
-                {skillGroups.map((group) => (
-                  <div key={group.id}>
-                    <dt className="eyebrow mb-1.5 text-accent-700">{group.label}</dt>
-                    <dd className="font-mono text-xs leading-relaxed text-ink-800">
-                      {group.skills.slice(0, 4).join(", ")}
-                    </dd>
-                  </div>
-                ))}
-              </dl>
+
+              {/* Sidebar Index Card */}
+              <div className="vintage-border-box p-5 sm:p-6 bg-paper-sunken">
+                <div className="mb-4 border-b-2 border-ink-800 pb-2 flex items-center justify-between">
+                  <h2 className="font-mono text-xs font-bold uppercase tracking-wider text-ink-950">
+                    Classification Index
+                  </h2>
+                  <span className="font-mono text-[0.65rem] uppercase text-accent-700 font-bold">
+                    SEC. A-1
+                  </span>
+                </div>
+
+                <dl className="divide-y divide-ink-300">
+                  {skillGroups.map((group) => (
+                    <div key={group.id} className="py-3 first:pt-0 last:pb-0">
+                      <dt className="font-mono text-xs font-bold text-accent-700 uppercase tracking-wide">
+                        {group.label}
+                      </dt>
+                      <dd className="mt-1 font-mono text-xs leading-relaxed text-ink-800">
+                        {group.skills.join(", ")}
+                      </dd>
+                    </div>
+                  ))}
+                </dl>
+              </div>
             </div>
           </div>
         </div>
@@ -78,22 +100,27 @@ export default function HomePage() {
           title={leadProject.title}
           intro={leadProject.outcome}
         >
-          <div className="vintage-border-box bg-paper p-6 sm:p-8">
+          <div className="vintage-panel p-6 sm:p-8">
             <div className="grid gap-8 lg:grid-cols-[1.4fr_1fr] lg:items-start lg:gap-10">
               <ProjectMediaFrame
                 media={leadProject.media[0]!}
                 priority
                 sizes="(min-width: 1024px) 40rem, 100vw"
               />
-              <div>
-                <TagList
-                  items={leadProject.primaryStack}
-                  label={`Primary stack for ${leadProject.title}`}
-                />
-                <p className="mt-5 text-base leading-relaxed text-ink-700 sm:mt-6">
-                  {leadProject.caseStudy.architectureSummary}
-                </p>
-                <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm sm:mt-7">
+              <div className="flex flex-col justify-between h-full">
+                <div>
+                  <div className="mb-4 inline-block font-mono text-xs font-bold uppercase tracking-widest text-accent-700 border-b-2 border-accent-600 pb-1">
+                    Featured Architectural Case Study
+                  </div>
+                  <TagList
+                    items={leadProject.primaryStack}
+                    label={`Primary stack for ${leadProject.title}`}
+                  />
+                  <p className="mt-5 text-base leading-relaxed text-ink-800 sm:mt-6">
+                    {leadProject.caseStudy.architectureSummary}
+                  </p>
+                </div>
+                <div className="mt-8 pt-6 border-t-2 border-ink-800 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm">
                   <Link
                     href={`/work/${leadProject.slug}`}
                     className="font-mono text-xs font-bold uppercase tracking-wider text-ink-950 underline decoration-accent-600 decoration-2 underline-offset-4 hover:text-accent-600"
@@ -121,14 +148,14 @@ export default function HomePage() {
             </li>
           ))}
         </ol>
-        <p className="mt-10 text-sm sm:mt-12">
+        <div className="mt-10 border-t-2 border-ink-800 pt-6">
           <Link
             href="/work"
-            className="font-mono text-xs font-bold uppercase tracking-wider text-ink-950 underline decoration-accent-600 decoration-2 underline-offset-4 hover:text-accent-600"
+            className="font-mono text-xs font-bold uppercase tracking-widest text-ink-950 underline decoration-accent-600 decoration-2 underline-offset-4 hover:text-accent-600"
           >
             See all work, including supporting projects →
           </Link>
-        </p>
+        </div>
       </Section>
 
       <ContactCta />
