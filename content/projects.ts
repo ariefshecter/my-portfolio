@@ -280,7 +280,7 @@ export const projects: Project[] = [
     tags: ["Next.js", "TypeScript", "Tailwind CSS", "Accessibility", "SEO"],
     primaryStack: ["Next.js 16", "TypeScript", "Tailwind CSS v4", "Vitest"],
     repositoryUrl: "https://github.com/ariefshecter/my-portfolio",
-    liveUrl: "https://my-portfolio-eta-ten-60.vercel.app",
+    liveUrl: "https://ariefshecter.vercel.app",
     featured: true,
     media: [
       {

@@ -99,7 +99,7 @@ describe("content model integrity", () => {
     );
     expect(profile.githubUrl).toBe("https://github.com/ariefshecter");
     expect(profile.resumePath).toBe("/assets/resume/resume.pdf");
-    expect(SITE_URL).toBe("https://my-portfolio-eta-ten-60.vercel.app");
+    expect(SITE_URL).toBe("https://ariefshecter.vercel.app");
     expect(profile.canonicalUrl).toBe(SITE_URL);
   });
 

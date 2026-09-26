@@ -4,7 +4,7 @@ Recruiter-focused portfolio for a junior Full Stack Developer, built with the Ne
 TypeScript, and Tailwind CSS. Content is a typed source of truth, every route is statically
 generated, and project claims are limited to what the public repositories can evidence.
 
-Canonical URL: <https://my-portfolio-eta-ten-60.vercel.app>
+Canonical URL: <https://ariefshecter.vercel.app>
 
 ## Stack
 

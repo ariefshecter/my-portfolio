@@ -22,7 +22,7 @@ Settings → Public profile.
 - [ ] **Name:** `Ferry Khusnil Arief`
 - [ ] **Bio:** `Fresh Graduate & Full Stack Developer | Next.js, TypeScript, Go/Fiber, Laravel, PostgreSQL`
 - [ ] **Location:** `Lampung, Indonesia`
-- [ ] **Website:** `https://my-portfolio-eta-ten-60.vercel.app`
+- [ ] **Website:** `https://ariefshecter.vercel.app`
 - [ ] **Social:** LinkedIn `https://www.linkedin.com/in/ferry-khusnil-arief/`
 - [ ] Enable "Available for hire" only while it is actually true.
 
@@ -43,7 +43,7 @@ I build web systems end to end: typed Next.js and TypeScript interfaces, Go/Fibe
 backends, and relational data models in PostgreSQL and MySQL/MariaDB. I also work with Python and
 machine learning, which informs a data-oriented approach to product development.
 
-[Portfolio](https://my-portfolio-eta-ten-60.vercel.app) ·
+[Portfolio](https://ariefshecter.vercel.app) ·
 [LinkedIn](https://www.linkedin.com/in/ferry-khusnil-arief/) ·
 [Email](mailto:ceryover@gmail.com)
 
@@ -72,7 +72,7 @@ machine learning, which informs a data-oriented approach to product development.
 
 ## Contact
 
-- Portfolio: <https://my-portfolio-eta-ten-60.vercel.app>
+- Portfolio: <https://ariefshecter.vercel.app>
 - Email: <ceryover@gmail.com>
 - LinkedIn: <https://www.linkedin.com/in/ferry-khusnil-arief/>
 ```
@@ -100,7 +100,7 @@ Only for original (non-fork) repositories. English descriptions.
 | --- | --- | --- | --- |
 | `campus-reservation-system` | Full-stack campus facility reservation platform: Next.js/TypeScript client, Go/Fiber API with 37 REST endpoints, PostgreSQL, JWT and OTP auth, QR check-in. | `nextjs` `typescript` `golang` `fiber` `postgresql` `jwt` `docker` `rest-api` `monorepo` | — (no deployment) |
 | `sistem-rapor` | Laravel academic reporting system with role-based access, grade management, and printable PDF report cards. | `laravel` `php` `blade` `mysql` `dompdf` `rbac` | — (no deployment) |
-| `my-portfolio` | Developer portfolio built with Next.js App Router, TypeScript, and Tailwind CSS. | `nextjs` `typescript` `tailwindcss` `portfolio` `accessibility` `seo` | `https://my-portfolio-eta-ten-60.vercel.app` |
+| `my-portfolio` | Developer portfolio built with Next.js App Router, TypeScript, and Tailwind CSS. | `nextjs` `typescript` `tailwindcss` `portfolio` `accessibility` `seo` | `https://ariefshecter.vercel.app` |
 | `gamer-clustering-kmeans` | K-Means clustering of game player characteristics by feature preference and business model. | `python` `jupyter` `kmeans` `clustering` `data-analysis` | — |
 | `Comparative-Analysis-of-...-Xception-...` | Comparison of InceptionV3, ResNet152V2, and Xception for animal image classification. | `python` `tensorflow` `keras` `transfer-learning` `cnn` | — |
 | `Implementasi-dan-Analisis-Model-CNN-...` | CNN implementation and analysis for animal image classification. | `python` `tensorflow` `keras` `cnn` | — |

@@ -11,7 +11,7 @@
 - The application needs no environment variables and no `vercel.json`.
 
 Do not create a second Vercel project. Reuse the project that owns
-`my-portfolio-eta-ten-60.vercel.app` so portfolio and resume links remain stable.
+`ariefshecter.vercel.app` so portfolio and resume links remain stable.
 
 ## 1. Finalize version control
 
@@ -55,7 +55,7 @@ Expected result: the status is clean and `main` is not ahead of `origin/main`.
 ## 2. Repair the Vercel Git connection
 
 1. Sign in at <https://vercel.com/dashboard>.
-2. Open the project whose domain is `my-portfolio-eta-ten-60.vercel.app`.
+2. Open the project whose domain is `ariefshecter.vercel.app`.
 3. Open **Settings > Git**.
 4. Confirm **Connected Git Repository** is `ariefshecter/my-portfolio`.
 5. Confirm **Production Branch** is `main`.
@@ -88,12 +88,12 @@ Open the production domain in a private browser window and verify the home, work
 about, and resume pages. Then run:
 
 ```bash
-curl -fsS "https://my-portfolio-eta-ten-60.vercel.app" | grep -F "Ferry Khusnil Arief"
-curl -fsS "https://my-portfolio-eta-ten-60.vercel.app/robots.txt"
-curl -fsS "https://my-portfolio-eta-ten-60.vercel.app/sitemap.xml"
-curl -sS -o /dev/null -w '%{http_code}\n' "https://my-portfolio-eta-ten-60.vercel.app/work/sistem-rapor"
-curl -sS -o /dev/null -w '%{http_code}\n' "https://my-portfolio-eta-ten-60.vercel.app/assets/resume/resume.pdf"
-curl -sS -o /dev/null -w '%{http_code}\n' "https://my-portfolio-eta-ten-60.vercel.app/nonexistent-deployment-check"
+curl -fsS "https://ariefshecter.vercel.app" | grep -F "Ferry Khusnil Arief"
+curl -fsS "https://ariefshecter.vercel.app/robots.txt"
+curl -fsS "https://ariefshecter.vercel.app/sitemap.xml"
+curl -sS -o /dev/null -w '%{http_code}\n' "https://ariefshecter.vercel.app/work/sistem-rapor"
+curl -sS -o /dev/null -w '%{http_code}\n' "https://ariefshecter.vercel.app/assets/resume/resume.pdf"
+curl -sS -o /dev/null -w '%{http_code}\n' "https://ariefshecter.vercel.app/nonexistent-deployment-check"
 ```
 
 Expected results:
@@ -107,8 +107,8 @@ Expected results:
 Confirm old CRA artifacts no longer resolve:
 
 ```bash
-curl -sS -o /dev/null -w '%{http_code}\n' "https://my-portfolio-eta-ten-60.vercel.app/static/js/main.927b7d75.js"
-curl -sS -o /dev/null -w '%{http_code}\n' "https://my-portfolio-eta-ten-60.vercel.app/manifest.json"
+curl -sS -o /dev/null -w '%{http_code}\n' "https://ariefshecter.vercel.app/static/js/main.927b7d75.js"
+curl -sS -o /dev/null -w '%{http_code}\n' "https://ariefshecter.vercel.app/manifest.json"
 ```
 
 Both should return `404`; the new manifest is `/manifest.webmanifest`.

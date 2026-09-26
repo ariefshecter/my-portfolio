@@ -1,6 +1,6 @@
 import type { ExperienceEntry, Profile, SkillGroup } from "./types";
 
-export const SITE_URL = "https://my-portfolio-eta-ten-60.vercel.app";
+export const SITE_URL = "https://ariefshecter.vercel.app";
 
 export const profile: Profile = {
   name: "Ferry Khusnil Arief",
